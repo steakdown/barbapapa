@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/f9c8b55d436aba1ef1b7ca6cf4ed80215067dfe9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d5cdf75ecaac804c33125ad13aa8ee46b818fc6d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/7010111607698afeefc5cb9741722df0320133e4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_41d833c30c5dfe9dd1b9b6a41a3ea8e12a065d00/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_fc7434c9ae56af53976cff50bd160dcd3d5cf5cf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/dacdc55ec244809ad055a95c8d6bf66436cc2ed8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9bb73a4538c03c12c891a6920d98e9e86b434016/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/463a5a30d7650d746efefdb73b29c6a8a332157c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3d2c1c78bd0b35a35f5fc8706212079665fbba1f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/42ad790d4c80d200d1418ddd50be2ad4a6d6cc69/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c854f62f9ccceb9c9a129c356367a3929730fb61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/6d6ca4727e5eedd15baf6c7dde5fb9191994f1d4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cd4c2f2eea3ae49185a5ab2e105b17d51c96740f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/dev/barbapapa/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_c9fa326587d18c697d92672281acda1856994cf4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/128d99ad02268e5a3ebfa1283c4bb8e7951cc3fb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_698f922aba424de9b66be7fe2f63a35e12e960b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/f39074ecf4be6c63b65ea526b15a08d3ea0286ba/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a923a75d83338d614e515e171290b50c6bf8ebe0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/dev/barbapapa/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fb9934657c3363540bd3f4ae0015ffc835bce1ca">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ba21bdfc77db01a785a12debb785646d7802a058/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/90d80af1d45572330b1dea97ee06ac83eebb7e96/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6299091725d3a8b050f86b875592d5fc7d5564cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/4342fa9143c07283174dfa175b3297c65b7fd207/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10b88023476431318b64ce44c58840bca84fb697/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/ca45cbee2cbb936d30d08fc385681fdd5abab29a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a19c70a7b16887850d4f19895c44fa224b6edd5d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.0/support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.0_b9a277f41f286cde1f70fc9ecacdbbae40e95f94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/25dd4be4fba70ad8e761513ca5d14c54245ebc3e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_72f22f1b7c618b2b4ce185936a2d30faa2b90c66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/hugo/.android/build-cache/4a4c0754883d82294403e9b58033a86dd4af222d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="/home/hugo/dev/barbapapa/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1501716d014e79d1664c038c0f234e3165560ada/classes.dex" />
+    </item>
+
+</items>

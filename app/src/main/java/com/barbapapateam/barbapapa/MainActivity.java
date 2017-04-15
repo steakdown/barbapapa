@@ -16,12 +16,17 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+
+import org.json.*;
 
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
+    public LinkedList<Beer> beers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 LaunchBarmanActivity();
             }
         });
+
+        // NOTE(hugo) : Creating beer list
+        beers = Utils.getBeersFromJSON("beers.json", this);
     }
 
     private void setupViewPager(ViewPager viewPager)

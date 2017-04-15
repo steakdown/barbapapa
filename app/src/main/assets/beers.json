@@ -1,0 +1,16 @@
+{
+  "beers": [{"name": "Kwak", "type": "Belge Triple", "color": "Ambrée", "ABV": 8.4, "price": 1.6, "bottle": true},
+{"name": "Delirium", "type": "Belge Triple", "color": "Blonde", "ABV": 8.5, "price": 2.4, "bottle": true},
+{"name": "Tripel Karmeliet", "type": "Belge Triple", "color": "Blonde", "ABV": 8.4, "price": 2.1, "bottle": true},
+{"name": "Leffe", "type": "Belge", "color": "Blonde", "ABV": 6.6, "price": 1.8, "bottle": true},
+{"name": "Desperados", "type": "Lager arôme Tequila", "color": "Blonde", "ABV": 5.9, "price": 2.1, "bottle": true},
+{"name": "Kriek", "type": "Lambic à la cerise", "color": "Rouge", "ABV": 3.5, "price": 1.8, "bottle": true},
+{"name": "Punk", "type": "India Pale Ale", "color": "Blonde", "ABV": 5.6, "price": 2.7, "bottle": true},
+{"name": "Cuvée des Trolls", "type": "Belge", "color": "Blonde", "ABV": 7, "price": 1.8, "bottle": true},
+{"name": "1664 Blanc", "type": "Witbier", "color": "Blanche", "ABV": 5, "price": 1.9, "bottle": true},
+{"name": "Pêcheresse", "type": "Lambic à la pêche", "color": "Blonde", "ABV": 2.5, "price": 1.6, "bottle": true},
+{"name": "Elephant", "type": "Pilsner", "color": "Blonde", "ABV": 7.5, "price": 3.0, "bottle": false},
+{"name": "Kronenbourg", "type": "Lager", "color": "Blonde", "ABV": 4.2, "price": 1.9, "bottle": false},
+{"name": "Grimbergen Blanche", "type": "Witbier", "color": "Blanche", "ABV": 6.0, "price": 2.8, "bottle": false},
+{"name": "Grimbergen Double Ambrée", "type": "Belge Double", "color": "Ambrée", "ABV": 6.5, "price": 2.9, "bottle": false}]
+}

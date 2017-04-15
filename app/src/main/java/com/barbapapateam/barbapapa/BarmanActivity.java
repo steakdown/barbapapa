@@ -1,6 +1,6 @@
 package com.barbapapateam.barbapapa;
 
-import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,23 +9,47 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.HashMap;
+import java.util.LinkedList;
 
+/**
+ * Created by hugo on 15/04/17.
+ */
+
+public class BarmanActivity extends AppCompatActivity 
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) 
+	{
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.barman_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        ListView commandList = (ListView) findViewById(R.id.commandList);
+
+        String from[]  = {"name"};
+        int to[] = {R.id.checkBox};
+        int commandLayoutResId = R.layout.barman_command_layout;
+
+        LinkedList<HashMap<String, String>> commands = new LinkedList<HashMap<String, String>>();
+        for(int Index = 0; Index < 5; ++Index)
+        {
+            HashMap<String,String> command = new HashMap<>();
+            command.put("name", "coucou");
+            commands.add(command);
+        }
+        commandList.setAdapter(new SimpleAdapter(this, commands, commandLayoutResId, from, to));
+
+        commandList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
-                LaunchBarmanActivity();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
             }
         });
     }
@@ -50,11 +74,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private void LaunchBarmanActivity()
-    {
-        Intent barmanIntent = new Intent(this, BarmanActivity.class);
-        startActivity(barmanIntent);
     }
 }

@@ -23,25 +23,16 @@ import java.util.LinkedList;
 public class BarmanActivity extends AppCompatActivity 
 {
 
-    static LinkedList<Beer> beers = createDummyBeerList();
-    static LinkedList<Command> dummyCommandList = createDummyCommandList();
+    LinkedList<Beer> beers;
+    LinkedList<Command> dummyCommandList;
 
-    static private LinkedList<Command> createDummyCommandList()
+    private LinkedList<Command> createDummyCommandList()
     {
         LinkedList<Command> result = new LinkedList<>();
         Command command = new Command(beers.get(0), 2, "Julien");
         result.push(command);
         command = new Command(beers.get(0), 1, "Sebastian");
         result.push(command);
-
-        return(result);
-    }
-
-    static private LinkedList<Beer> createDummyBeerList()
-    {
-        LinkedList<Beer> result = new LinkedList<>();
-        Beer beer = new Beer("A", 2.0f, 5, "", null);
-        result.push(beer);
 
         return(result);
     }
@@ -53,6 +44,9 @@ public class BarmanActivity extends AppCompatActivity
         setContentView(R.layout.barman_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        beers = Utils.getBeersFromJSON("beers.json", this);
+        dummyCommandList = createDummyCommandList();
 
 
         ListView commandList = (ListView) findViewById(R.id.commandList);

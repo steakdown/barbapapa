@@ -116,7 +116,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void LaunchBarmanActivity()
     {
-        Intent barmanIntent = new Intent(this, BarmanActivity.class);
-        startActivity(barmanIntent);
+        //Intent barmanIntent = new Intent(this, BarmanActivity.class);
+        //startActivity(barmanIntent);
+
+        //Beer biere = new Beer("Test", 10, 3, null, null, "bonde", "rousse", 2, true);
+        Intent commandIntent = new Intent(this, CommandActivity.class);
+        //commIntent.putExtra("BEER", biere);
+        startActivity(commandIntent);
     }
 }

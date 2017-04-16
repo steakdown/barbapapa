@@ -1,9 +1,10 @@
 package com.barbapapateam.barbapapa;
 
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class Beer
+public class Beer implements Serializable
 {
     public String name;
     public float price;

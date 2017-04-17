@@ -11,18 +11,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.LinkedList;
 
 public class AdvancedRecommandationActivity extends Activity implements View.OnClickListener {
-
-    private ImageButton noB = null;
-    private ImageButton yesB = null;
-    private ImageButton goBackB = null;
 
     //Zone de texte contenant la question
     TextView t1 = (TextView) findViewById(R.id.ARtextView);
@@ -100,7 +94,7 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 Beer beer = beers.get(i);
                 //L'utilisateur veut une bière forte
                 //Dans le cas du degré, on doit faire un prétraite car ABV est un float
-                if(attributes[indice1][indice2] == "forte")
+                if(indice2 == 0)
                     if(beer.getABV() <= 6)
                         beers.remove(i);
                 //L'utilisateur veut une bière douce.
@@ -119,7 +113,7 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
         } else if (indice1 == 1) { //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
                 for (int i = 0; i < beers.size(); i++) {
                     Beer beer = beers.get(i);
-                    if (beer.getColor() != attributes[indice1][indice2]){
+                    if (beer.getColor().equals(attributes[indice1][indice2])){
                         beers.remove(i);
                     }
                 }
@@ -138,14 +132,14 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.advanced_recommandation);
 
-        //Ajout d'une bar d'action
+        /*//Ajout d'une bar d'action
         ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);*/
 
         //connection des boutons entre model et view
-        noB = (ImageButton) findViewById(R.id.imageButtonCross);
-        yesB = (ImageButton) findViewById(R.id.imageButtonValid);
-        goBackB = (ImageButton) findViewById(R.id.imageButtonBack);
+        ImageButton noB = (ImageButton) findViewById(R.id.imageButtonCross);
+        ImageButton yesB = (ImageButton) findViewById(R.id.imageButtonValid);
+        ImageButton goBackB = (ImageButton) findViewById(R.id.imageButtonBack);
 
         noB.setOnClickListener(this);
         yesB.setOnClickListener(this);

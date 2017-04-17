@@ -28,13 +28,14 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         ListView beerList = (ListView) view.findViewById(R.id.beer_list_view);
 
-        LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext());
+        LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext()); /*
         String[] names = new String[beers.size()];
         for(int i = 0; i < beers.size(); i++){
             Beer beer = beers.get(i);
             names[i] = beer.name;
         }
-        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, names);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, names);*/
+        BeerAdapter adapter = new BeerAdapter(getActivity().getApplicationContext(), beers);
         beerList.setAdapter(adapter);
         return view;
     }

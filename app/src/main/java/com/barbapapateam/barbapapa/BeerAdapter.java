@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * Created by dave on 17/04/17.
@@ -15,9 +17,9 @@ import java.util.ArrayList;
 public class BeerAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mInflater;
-    private ArrayList<Beer> mDataSource;
+    private LinkedList<Beer> mDataSource;
 
-    public BeerAdapter(Context context, ArrayList<Beer> items) {
+    public BeerAdapter(Context context, LinkedList<Beer> items) {
         mContext = context;
         mDataSource = items;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -47,6 +49,23 @@ public class BeerAdapter extends BaseAdapter {
         // Get view for row item
         View rowView = mInflater.inflate(R.layout.list_item_beer, parent, false);
 
+        TextView beerName =
+                (TextView) rowView.findViewById(R.id.beer_name);
+
+        TextView beerABV =
+                (TextView) rowView.findViewById(R.id.beer_ABV);
+
+        TextView beerPrice =
+                (TextView) rowView.findViewById(R.id.beer_price);
+
+        TextView beerType =
+                (TextView) rowView.findViewById(R.id.beer_type);
+
+        Beer beer = (Beer) getItem(position);
+        beerName.setText(beer.name);
+        beerABV.setText(beer.ABV + "%");
+        beerPrice.setText(beer.price + "€");
+        beerType.setText("Style : " + beer.type);
         return rowView;
     }
 }

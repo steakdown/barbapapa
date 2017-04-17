@@ -46,8 +46,8 @@
             android:id="@+id/imageButtonValid"
             android:layout_width="69dp"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_check_mark"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.01"
+            app:srcCompat="@drawable/ic_check_mark" />
 
     </LinearLayout>
 </LinearLayout>

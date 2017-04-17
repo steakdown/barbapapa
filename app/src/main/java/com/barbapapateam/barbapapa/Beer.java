@@ -28,4 +28,19 @@ public class Beer
         this.bottle = bottle;
     }
 
+    public String getColor(){
+        return this.color;
+    }
+
+     public String getType(){
+         return this.type;
+     }
+
+     public float getABV(){
+         return  this.ABV;
+     }
+
+     public boolean getBottle(){
+         return this.bottle;
+     }
 }

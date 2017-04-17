@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private ListView beerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Database.initDb(this);
         }
+
     }
 
     private void setupViewPager(ViewPager viewPager)

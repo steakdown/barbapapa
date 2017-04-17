@@ -8,19 +8,21 @@ public class Beer implements Serializable
 {
     public String name;
     public float price;
-    public float note;
     //public String imagePath; - plutot utiliser un ID
     public int imageID;
+    public int noteSum;
+    public int noteCount;
+    public String imagePath;
     public LinkedList<String> opinions;
     public String type;
     public String color;
     public float ABV;
     public boolean bottle;
 
-    public Beer(String name, float price, float note, int imageID, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle) {
+
+    public Beer(String name, float price, int imageID, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle) {
         this.name = name;
         this.price = price;
-        this.note = note;
         //this.imagePath = imagePath;
         this.imageID = imageID;
         this.opinions = opinions;
@@ -28,6 +30,19 @@ public class Beer implements Serializable
         this.color = color;
         this.ABV = ABV;
         this.bottle = bottle;
+        this.noteSum = 0;
+        this.noteCount = 0;
+    }
+
+    public int getNote()
+    {
+        return(noteSum / noteCount);
+    }
+
+    public void addNote(int note)
+    {
+        noteSum += note;
+        noteCount += 1;
     }
 
     public String getDescriptiveText()

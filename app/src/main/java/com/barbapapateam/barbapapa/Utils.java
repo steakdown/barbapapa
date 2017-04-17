@@ -1,6 +1,7 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Context;
+import android.content.Intent;
 import android.provider.MediaStore;
 
 import org.json.JSONArray;
@@ -47,7 +48,9 @@ public class Utils {
                 float beerPrice = Float.parseFloat(jsonBeer.getString("price"));
                 boolean beerBottle = jsonBeer.getString("bottle").equals("true");
 
-                Beer beer = new Beer(beerName, beerPrice, 0, 0, null, beerType, beerColor, beerABV, beerBottle);
+
+                Beer beer = new Beer(beerName, beerPrice, 0, null, beerType, beerColor, beerABV, beerBottle);
+
                 beers.push(beer);
             }
         } catch (JSONException e) {
@@ -57,4 +60,11 @@ public class Utils {
         }
         return(beers);
     }
+
+    static public void goToActivity(Context context, Class<?> activityClass)
+    {
+        Intent intent = new Intent(context, activityClass);
+        context.startActivity(intent);
+    }
+
 }

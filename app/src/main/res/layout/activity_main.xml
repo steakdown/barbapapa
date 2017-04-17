@@ -28,7 +28,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_babar"
-                    android:backgroundTint="@color/colorPrimary"/>
+                    android:backgroundTint="@color/colorPrimary"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <TextView
                     android:layout_width="wrap_content"

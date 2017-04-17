@@ -6,10 +6,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -28,7 +30,7 @@ public class CommandActivity extends AppCompatActivity {
     private Beer beer = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(final Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.command_layout);
@@ -63,6 +65,21 @@ public class CommandActivity extends AppCompatActivity {
         TextView price = (TextView) findViewById(R.id.priceText);
         price.setText(beer.getPrice());
 
+        ImageButton cancel = (ImageButton) findViewById(R.id.cancelButton);
+        cancel.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                returnToMainActivity();
+            }
+        });
+    }
+
+    public void returnToMainActivity()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 }

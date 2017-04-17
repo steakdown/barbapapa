@@ -13,6 +13,45 @@
         android:orientation="vertical"
         android:weightSum="1">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.40"
+                    android:gravity="center"
+                    android:text="Commande"
+                    android:textSize="25sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.23"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:tint="#FFFF"
+                    app:srcCompat="@drawable/ic_search_black_24dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,7 +151,7 @@
             <ImageView
                 android:id="@+id/beerPhoto"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="295dp"
                 android:minHeight="216dp"
                 tools:mockup="@drawable/affligem" />
 

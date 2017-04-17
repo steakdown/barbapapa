@@ -30,7 +30,7 @@ public class NotationActivity extends AppCompatActivity {
             }
         });*/
 
-        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+        final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -56,6 +56,19 @@ public class NotationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 LaunchMainActivity();
+            }
+        });
+
+        Button addNoteButton = (Button) findViewById(R.id.button_add_note);
+        addNoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // NOTE(hugo) : Can be improved since it's not _exactly_
+                // the beer from the last command. But should work for the MVP
+
+                //TODO(hugo) : Get rid of this
+                Database.pushCommand(Database.beers.get(0), 1, "Benjamin");
+                Database.commands.getLast().beer.addNote(seekBar.getProgress());
             }
         });
     }

@@ -11,7 +11,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.LinkedList;
+
 public class AdvancedRecommandationActivity extends Activity {
+
+
+    private String[] questions = {"Question 1", "Question 2", "Question 3", "Question 4", "Question 5"};
+    AdvancedRecommandation question;
+    LinkedList<Beer> beers;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

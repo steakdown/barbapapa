@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
-                LaunchBarmanActivity();
+                LaunchCommandActivity();
             }
         });
 
@@ -116,12 +116,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void LaunchBarmanActivity()
     {
-        //Intent barmanIntent = new Intent(this, BarmanActivity.class);
-        //startActivity(barmanIntent);
+        Intent barmanIntent = new Intent(this, BarmanActivity.class);
+        startActivity(barmanIntent);
+    }
 
-        Beer biere = new Beer("Affligem", 10, 4, "@drawable/affligem.png", null, "Bière de trappiste", "Blonde", 2, true);
+    private void LaunchCommandActivity()
+    {
+        //Beer affligem = new Beer("Affligem", 10, 4, "@drawable/affligem.png", null, "Bière de trappiste", "Blonde", 5.3, true);
+        Beer leffe = new Beer("Leffe", (float)2.2, (float)3.5, R.drawable.leffe, null, "Bière Belge", "Blonde", (float)5.5, true);
         Intent commandIntent = new Intent(this, CommandActivity.class);
-        commandIntent.putExtra("BEER", biere);
+        commandIntent.putExtra("BEER", leffe);
         startActivity(commandIntent);
     }
 }

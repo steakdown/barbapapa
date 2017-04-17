@@ -44,7 +44,7 @@ public class CommandActivity extends AppCompatActivity {
         ratingBar.setRating(beer.note);
 
         ImageView beerImage = (ImageView) findViewById(R.id.beerPhoto);
-        beerImage.setImageResource(R.drawable.affligem);
+        beerImage.setImageResource(beer.imageID);
 
 
 

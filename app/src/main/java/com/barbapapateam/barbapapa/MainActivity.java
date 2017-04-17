@@ -1,6 +1,7 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -46,10 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
+
+
                 //LaunchCommandActivity();
 
                 //LaunchBarmanActivity();
-				LaunchNotationActivity();
+
+                LaunchNotationActivity();
             }
         });
 
@@ -127,10 +131,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void LaunchCommandActivity() {
-        Beer affligem = new Beer("Affligem", 10, R.drawable.affligem, null, "Bière de trappiste", "Blonde", (float) 5.3, true);
-        //Beer leffe = new Beer("Leffe", (float)2.2, R.drawable.leffe, null, "Bière Belge", "Blonde", (float)5.5, true);
+
+        Beer beer = new Beer("Test", (float)2, R.drawable.affligem, null, "Trappist", "Test2", (float) 3, true);
         Intent commandIntent = new Intent(this, CommandActivity.class);
-        commandIntent.putExtra("BEER", affligem);
+        commandIntent.putExtra("BEER", beer);
         startActivity(commandIntent);
 
     }

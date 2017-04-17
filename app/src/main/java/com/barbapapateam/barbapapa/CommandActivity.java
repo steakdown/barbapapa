@@ -43,6 +43,7 @@ public class CommandActivity extends AppCompatActivity {
         Intent intent = getIntent();
         beer = (Beer) intent.getSerializableExtra("BEER");
 
+
         TextView beerText = (TextView) findViewById(R.id.beerText);
         beerText.setText(beer.name);
 

@@ -36,7 +36,9 @@ public class Beer implements Serializable
 
     public int getNote()
     {
-        return(noteSum / noteCount);
+        if(noteCount != 0)
+            return(noteSum / noteCount);
+        else return 0;
     }
 
     public void addNote(int note)

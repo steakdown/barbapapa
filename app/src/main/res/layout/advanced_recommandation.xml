@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.88"
+        app:srcCompat="@drawable/ic_babar" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Aimez - vous la bière ?" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:id="@+id/imageButtonCross"
+            android:layout_width="69dp"
+            android:layout_height="76dp"
+            app:srcCompat="@drawable/ic_wrong"
+            android:layout_weight="0.01" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBack"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_go_back"
+            android:layout_weight="0.01" />
+
+        <ImageButton
+            android:id="@+id/imageButtonValid"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_check_mark"
+            android:layout_weight="0.01" />
+
+    </LinearLayout>
 </LinearLayout>

@@ -24,7 +24,6 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".NotationActivity"
-            android:label="@string/title_activity_notation"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

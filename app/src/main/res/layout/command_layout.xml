@@ -55,6 +55,7 @@
                     android:contextClickable="false"
                     android:elevation="0dp"
                     android:foregroundGravity="right|center"
+                    android:isIndicator="true"
                     android:numStars="5"
                     android:rating="2.5"
                     android:stepSize="0.5"

@@ -122,10 +122,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void LaunchCommandActivity()
     {
-        //Beer affligem = new Beer("Affligem", 10, 4, "@drawable/affligem.png", null, "Bière de trappiste", "Blonde", 5.3, true);
-        Beer leffe = new Beer("Leffe", (float)2.2, (float)3.5, R.drawable.leffe, null, "Bière Belge", "Blonde", (float)5.5, true);
+        Beer affligem = new Beer("Affligem", 10, 4, R.drawable.affligem, null, "Bière de trappiste", "Blonde", (float)5.3, true);
+        //Beer leffe = new Beer("Leffe", (float)2.2, (float)3.5, R.drawable.leffe, null, "Bière Belge", "Blonde", (float)5.5, true);
         Intent commandIntent = new Intent(this, CommandActivity.class);
-        commandIntent.putExtra("BEER", leffe);
+        commandIntent.putExtra("BEER", affligem);
         startActivity(commandIntent);
     }
 }

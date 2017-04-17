@@ -24,6 +24,9 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     private ImageButton yesB = null;
     private ImageButton goBackB = null;
 
+    //Zone de texte contenant la question
+    TextView t1 = (TextView) findViewById(R.id.ARtextView);
+
     /* Pour les questions, on choisira des questions ayant pour réponse "oui" ou "non""
      ex : -Voulez-vous une bière forte ?
           -Non.
@@ -51,17 +54,21 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
     LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", this);
 
-    //Zone de texte contenant la question
-    TextView t1 = (TextView) findViewById(R.id.ARtextView);
-
+    //Affiche le résultat de la recherche
+    private void getResult(){
+        //Affiche la liste des résultats.
+    }
 
     //Permet de passer à la question principale suivante
     private void getNextQuestion(){
-        indice1++;
-        indice2 = 0;
-        question = questions[indice1][indice2];
-        t1.setText(question);
-
+        if(indice1 == 3){
+            getResult();
+        } else {
+            indice1++;
+            indice2 = 0;
+            question = questions[indice1][indice2];
+            t1.setText(question);
+        }
     }
 
     //Permet de passer à la question principale précédente.

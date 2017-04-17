@@ -23,6 +23,10 @@
 			android:name=".BarmanActivity"
             android:theme="@style/AppTheme.NoActionBar" >
 		</activity>
+        <activity
+            android:name=".AdvancedRecommandationActivity"
+            android:theme="@style/AppTheme  " >
+        </activity>
     </application>
 
 </manifest>

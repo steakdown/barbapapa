@@ -8,45 +8,48 @@
     android:weightSum="1">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ARImageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.88"
-        app:srcCompat="@drawable/ic_babar" />
+        android:layout_weight="0.88" />
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/ARtextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.12"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Aimez - vous la bière ?" />
+        android:gravity="center"
+        android:text="Voulez vous une bière en Pression ?"
+        android:textColor="black"/>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+
         <ImageButton
             android:id="@+id/imageButtonCross"
             android:layout_width="69dp"
             android:layout_height="76dp"
-            app:srcCompat="@drawable/ic_wrong"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.01"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_wrong" />
 
         <ImageButton
             android:id="@+id/imageButtonBack"
             android:layout_width="69dp"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_go_back"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.01"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/ic_go_back" />
 
         <ImageButton
             android:id="@+id/imageButtonValid"
             android:layout_width="69dp"
             android:layout_height="match_parent"
             android:layout_weight="0.01"
+            android:onClick="onClick"
             app:srcCompat="@drawable/ic_check_mark" />
 
     </LinearLayout>

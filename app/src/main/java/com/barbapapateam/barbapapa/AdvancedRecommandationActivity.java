@@ -10,10 +10,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.LinkedList;
 
-public class AdvancedRecommandationActivity extends Activity {
+public class AdvancedRecommandationActivity extends Activity implements View.OnClickListener {
+
+    private ImageButton noB = null;
+    private ImageButton yesB = null;
+    private ImageButton goBackB = null;
 
     /* Pour les questions, on choisira des questions ayant pour réponse "oui" ou "non""
      ex : -Voulez-vous une bière forte ?
@@ -42,12 +51,17 @@ public class AdvancedRecommandationActivity extends Activity {
     //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
     LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", this);
 
+    //Zone de texte contenant la question
+    TextView t1 = (TextView) findViewById(R.id.ARtextView);
+
 
     //Permet de passer à la question principale suivante
     private void getNextQuestion(){
         indice1++;
         indice2 = 0;
         question = questions[indice1][indice2];
+        t1.setText(question);
+
     }
 
     //Permet de passer à la question principale précédente.
@@ -55,16 +69,19 @@ public class AdvancedRecommandationActivity extends Activity {
         indice1--;
         indice2 = 0;
         question = questions[indice1][indice2];
+        t1.setText(question);
     }
 
     //Permet de passer à la question secondaire suivante.
     private void getNextNuance(){
         indice2++;
         if(questions[indice1][indice2] == null){
-
+            indice2 = 0;
+            question = questions[indice1][indice2];
         } else {
             question = questions[indice1][indice2];
         }
+        t1.setText(question);
     }
 
     // L'utilisateur répond oui
@@ -105,7 +122,7 @@ public class AdvancedRecommandationActivity extends Activity {
     }
 
     // L'utilisateur répond non, on passe à la question secondaire suivante
-    private void non(){
+    private void no(){
         getNextNuance();
     }
 
@@ -116,8 +133,33 @@ public class AdvancedRecommandationActivity extends Activity {
 
         //Ajout d'une bar d'action
         ActionBar actionBar = getActionBar();
-        //
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        //connection des boutons entre model et view
+        noB = (ImageButton) findViewById(R.id.imageButtonCross);
+        yesB = (ImageButton) findViewById(R.id.imageButtonValid);
+        goBackB = (ImageButton) findViewById(R.id.imageButtonBack);
+
+        noB.setOnClickListener(this);
+        yesB.setOnClickListener(this);
+        goBackB.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.imageButtonCross:
+                no();
+                break;
+
+            case R.id.imageButtonValid:
+                yes();
+                break;
+
+            case R.id.imageButtonBack:
+                getPreviousQuestion();
+                break;
+        }
     }
 
 

@@ -1,6 +1,7 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Context;
+import android.content.Intent;
 import android.provider.MediaStore;
 
 import org.json.JSONArray;
@@ -57,4 +58,11 @@ public class Utils {
         }
         return(beers);
     }
+
+    static public void goToActivity(Context context, Class<?> activityClass)
+    {
+        Intent intent = new Intent(context, activityClass);
+        context.startActivity(intent);
+    }
+
 }

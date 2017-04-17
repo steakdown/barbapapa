@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-    public LinkedList<Beer> beers;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +43,15 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //LaunchBarmanActivity();
-				LaunchNotationActivity();
+                LaunchBarmanActivity();
+				//LaunchNotationActivity();
             }
         });
 
-        // NOTE(hugo) : Creating beer list
-        beers = Utils.getBeersFromJSON("beers.json", this);
+        if(!Database.initialized)
+        {
+            Database.initDb(this);
+        }
     }
 
     private void setupViewPager(ViewPager viewPager)
@@ -123,5 +123,6 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent notationIntent = new Intent(this, NotationActivity.class);
         startActivity(notationIntent);
+
     }
 }

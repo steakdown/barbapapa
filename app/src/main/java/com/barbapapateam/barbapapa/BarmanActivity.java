@@ -23,18 +23,13 @@ import java.util.LinkedList;
 public class BarmanActivity extends AppCompatActivity 
 {
 
-    LinkedList<Beer> beers;
-    LinkedList<Command> dummyCommandList;
-
-    private LinkedList<Command> createDummyCommandList()
+    private void createDummyCommandList()
     {
-        LinkedList<Command> result = new LinkedList<>();
-        Command command = new Command(beers.get(0), 2, "Julien");
-        result.push(command);
-        command = new Command(beers.get(0), 1, "Sebastian");
-        result.push(command);
 
-        return(result);
+        Command command = new Command(Database.beers.get(0), 2, "Julien");
+        Database.commands.push(command);
+        command = new Command(Database.beers.get(0), 1, "Sebastian");
+        Database.commands.push(command);
     }
 
     @Override
@@ -45,8 +40,7 @@ public class BarmanActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        beers = Utils.getBeersFromJSON("beers.json", this);
-        dummyCommandList = createDummyCommandList();
+        createDummyCommandList();
 
 
         ListView commandList = (ListView) findViewById(R.id.commandList);
@@ -56,10 +50,10 @@ public class BarmanActivity extends AppCompatActivity
         int commandLayoutResId = R.layout.barman_command_layout;
 
         LinkedList<HashMap<String, String>> commands = new LinkedList<HashMap<String, String>>();
-        for(int Index = 0; Index < dummyCommandList.size(); ++Index)
+        for(int Index = 0; Index < Database.commands.size(); ++Index)
         {
             HashMap<String,String> commandMap = new HashMap<>();
-            Command command = dummyCommandList.get(Index);
+            Command command = Database.commands.get(Index);
             String text = command.beer.name + " (" + command.beerCount + ") - " + command.clientName;
             commandMap.put("name", text);
             commands.add(commandMap);
@@ -72,7 +66,16 @@ public class BarmanActivity extends AppCompatActivity
 
             }
         });
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.debug_fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.goToActivity(BarmanActivity.this, MainActivity.class);
+            }
+        });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

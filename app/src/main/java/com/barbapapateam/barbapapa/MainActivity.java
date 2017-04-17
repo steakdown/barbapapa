@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent barmanIntent = new Intent(this, BarmanActivity.class);
         //startActivity(barmanIntent);
 
-        Beer biere = new Beer("Affligem", 10, 4, "@drawable/affligem.png", null, "blonde", "rousse", 2, true);
+        Beer biere = new Beer("Affligem", 10, 4, "@drawable/affligem.png", null, "Bière de trappiste", "Blonde", 2, true);
         Intent commandIntent = new Intent(this, CommandActivity.class);
         commandIntent.putExtra("BEER", biere);
         startActivity(commandIntent);

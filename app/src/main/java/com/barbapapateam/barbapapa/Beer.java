@@ -16,8 +16,7 @@ public class Beer implements Serializable
     public float ABV;
     public boolean bottle;
 
-    public Beer(String name, float price, int note, String imagePath, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle)
-    {
+    public Beer(String name, float price, int note, String imagePath, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle) {
         this.name = name;
         this.price = price;
         this.note = note;
@@ -29,4 +28,27 @@ public class Beer implements Serializable
         this.bottle = bottle;
     }
 
+    public String getDescriptiveText()
+    {
+        //TODO : pour faciliter le display des infos
+        return null;
+    }
+
+    public String getABV()
+    {
+        return String.valueOf(ABV) + "%";
+    }
+
+    public String getPrice()
+    {
+        return String.valueOf(price) + "€";
+    }
+
+    public String getBottleDesc()
+    {
+        if(bottle)
+            return "Bière en bouteille";
+        else
+            return "Bière pression";
+    }
 }

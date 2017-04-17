@@ -31,6 +31,11 @@
                 android:elevation="0dp"
                 android:orientation="horizontal">
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
                 <TextView
                     android:id="@+id/beerText"
                     android:layout_width="wrap_content"
@@ -40,7 +45,7 @@
                     android:text="BeerName"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="24sp"
+                    android:textSize="30sp"
                     android:typeface="normal"></TextView>
 
                 <Space
@@ -69,15 +74,40 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/beerDescription"
+            <TextView
+                android:id="@+id/typeText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/colorText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:text="Description" />
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/ABVText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/bottleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -88,7 +118,7 @@
             <ImageView
                 android:id="@+id/beerPhoto"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="375dp"
                 android:minHeight="216dp"
                 tools:mockup="@drawable/affligem" />
 

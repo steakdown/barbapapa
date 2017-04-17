@@ -48,6 +48,21 @@ public class CommandActivity extends AppCompatActivity {
 
 
 
+        TextView type = (TextView) findViewById(R.id.typeText);
+        type.setText(beer.type);
+
+        TextView color = (TextView) findViewById(R.id.colorText);
+        color.setText(beer.color);
+
+        TextView abv = (TextView) findViewById(R.id.ABVText);
+        abv.setText(beer.getABV());
+
+        TextView bottle = (TextView) findViewById(R.id.bottleText);
+        bottle.setText(beer.getBottleDesc());
+
+        TextView price = (TextView) findViewById(R.id.priceText);
+        price.setText(beer.getPrice());
+
     }
 
 }

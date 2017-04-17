@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
-                LaunchBarmanActivity();
+                LaunchAdvancedRecommandationActivity();
             }
         });
 
@@ -118,5 +118,11 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent barmanIntent = new Intent(this, BarmanActivity.class);
         startActivity(barmanIntent);
+    }
+
+    private void LaunchAdvancedRecommandationActivity()
+    {
+        Intent ARIntent = new Intent(this, AdvancedRecommandationActivity.class);
+        startActivity(ARIntent);
     }
 }

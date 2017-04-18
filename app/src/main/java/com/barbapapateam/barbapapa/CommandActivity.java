@@ -115,6 +115,7 @@ public class CommandActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view)
 			{
+                Database.pushCommand(Database.getBeerForCommand(), beerNumber, "userName");
 				Utils.goToActivity(CommandActivity.this, NotationActivity.class);
 			}
 		});

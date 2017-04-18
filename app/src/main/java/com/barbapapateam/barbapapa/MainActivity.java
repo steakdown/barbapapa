@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //LaunchAdvancedRecommandationActivity();
                 //LaunchCommandActivity();
-                //LaunchBarmanActivity();
-                LaunchNotationActivity();
+                LaunchBarmanActivity();
+                //LaunchNotationActivity();
             }
         });
 

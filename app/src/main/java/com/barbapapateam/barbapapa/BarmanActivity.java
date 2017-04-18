@@ -23,6 +23,8 @@ import java.util.LinkedList;
 public class BarmanActivity extends AppCompatActivity 
 {
 
+	static boolean debugInitialized = false;
+
     private void createDummyCommandList()
     {
 
@@ -40,13 +42,17 @@ public class BarmanActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        createDummyCommandList();
+		if(!debugInitialized)
+		{
+			createDummyCommandList();
+			debugInitialized = true;
+		}
 
 
         ListView commandList = (ListView) findViewById(R.id.commandList);
 
-        String from[]  = {"name"};
-        int to[] = {R.id.checkBox};
+        String from[]  = {"beer_image", "beer_name", "client_name"};
+        int to[] = {R.id.beer_photo, R.id.beer_name, R.id.client_name};
         int commandLayoutResId = R.layout.barman_command_layout;
 
         LinkedList<HashMap<String, String>> commands = new LinkedList<HashMap<String, String>>();
@@ -54,8 +60,10 @@ public class BarmanActivity extends AppCompatActivity
         {
             HashMap<String,String> commandMap = new HashMap<>();
             Command command = Database.commands.get(Index);
-            String text = command.beer.name + " (" + command.beerCount + ") - " + command.clientName;
-            commandMap.put("name", text);
+            String text = command.beer.name + " (" + command.beerCount + ")";
+            commandMap.put("beer_name", text);
+            commandMap.put("client_name", command.clientName);
+            commandMap.put("beer_image", Integer.toString(Database.getImageIdFromName(command.beer.name)));
             commands.add(commandMap);
         }
         commandList.setAdapter(new SimpleAdapter(this, commands, commandLayoutResId, from, to));
@@ -63,7 +71,8 @@ public class BarmanActivity extends AppCompatActivity
         commandList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Database.commands.remove(position);
+				recreate();
             }
         });
 

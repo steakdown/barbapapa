@@ -41,6 +41,22 @@ public class Beer implements Serializable
         else return 0;
     }
 
+    public String getColor(){
+        return this.color;
+    }
+
+     public String getType(){
+         return this.type;
+     }
+
+     public float getABVfloat(){
+         return  this.ABV;
+     }
+
+     public boolean getBottle(){
+         return this.bottle;
+     }
+     
     public void addNote(int note)
     {
         noteSum += note;

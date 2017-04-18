@@ -48,12 +48,16 @@ public class MainActivity extends AppCompatActivity {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
 
+                LaunchAdvancedRecommandationActivity();
+
+
 
                 //LaunchCommandActivity();
 
                 //LaunchBarmanActivity();
 
-                LaunchNotationActivity();
+                //LaunchNotationActivity();
+
             }
         });
 
@@ -129,6 +133,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(barmanIntent);
     }
 
+    private void LaunchAdvancedRecommandationActivity()
+    {
+        Intent ARIntent = new Intent(this, AdvancedRecommandationActivity.class);
+        startActivity(ARIntent);
+    }
 
     private void LaunchCommandActivity() {
 

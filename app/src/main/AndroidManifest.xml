@@ -19,10 +19,16 @@
             </intent-filter>
         </activity>
 
-		<activity
-			android:name=".BarmanActivity"
+		    <activity
+			      android:name=".BarmanActivity"
             android:theme="@style/AppTheme.NoActionBar" >
-		</activity>
+		    </activity>
+      
+        <activity
+            android:name=".AdvancedRecommandationActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+
         <activity
             android:name=".CommandActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -31,7 +37,8 @@
             android:name=".NotationActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
+      
     </application>
+
 
 </manifest>

@@ -88,7 +88,7 @@ public class BeerAdapter extends BaseAdapter {
         beerPrice.setText(beer.price + "€");
         beerType.setText("Style : " + beer.type);
 
-        Picasso.with(mContext).load(imageIDs.get(beer.name)).placeholder(R.mipmap.ic_launcher).into(thumbnail);
+        Picasso.with(mContext).load(imageIDs.get(beer.name)).into(thumbnail);
 
         return rowView;
     }

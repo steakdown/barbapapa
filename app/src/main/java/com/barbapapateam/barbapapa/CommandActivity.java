@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -107,6 +108,16 @@ public class CommandActivity extends AppCompatActivity {
                 }
             }
         });
+
+		Button commanderButton = (Button) findViewById(R.id.commanderButton);
+		commanderButton.setOnClickListener(new View.OnClickListener(){
+
+			@Override
+			public void onClick(View view)
+			{
+				Utils.goToActivity(CommandActivity.this, NotationActivity.class);
+			}
+		});
     }
 
     public void returnToMainActivity()

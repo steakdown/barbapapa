@@ -69,7 +69,7 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     private void getNextQuestion(){
         indice1++;
         if(indice1 == 3){
-            getResult();
+            LaunchCommandActivity(getMyBeer());
         } else {
             indice2 = 0;
             question = questions[indice1][indice2];
@@ -138,14 +138,14 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
             for (int i = 0; i < beers.size(); i++) {
                 Beer beer = beers.get(i);
-                if (beer.getBottle() != bottle[indice2]){
+                if (beer.bottle != bottle[indice2]){
                     beers.remove(i);
                 }
             }
         } else if (indice1 == 1) { //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
             for (int i = 0; i < beers.size(); i++) {
                 Beer beer = beers.get(i);
-                if (beer.getColor().equals(attributes[indice1][indice2])){
+                if (beer.color.equals(attributes[indice1][indice2])){
                     beers.remove(i);
                 }
             }

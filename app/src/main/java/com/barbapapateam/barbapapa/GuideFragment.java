@@ -122,17 +122,20 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     private void yes(){
         //On supprime des éléments de la liste.
         if (indice1 == 2){
-            for(int i = 0; i< beers.size(); i++){
-                Beer beer = beers.get(i);
-                //L'utilisateur veut une bière forte
-                //Dans le cas du degré, on doit faire un prétraite car ABV est un float
-                if(indice2 == 0)
-                    if(beer.ABV <= 6)
+            if(indice2 == 0){
+                for(int i = 0; i< beers.size(); i++){
+                    Beer beer = beers.get(i);
+                    if(beer.ABV < 6){
                         beers.remove(i);
-                        //L'utilisateur veut une bière douce.
-                    else
-                    if(beer.ABV >6)
+                    }
+                }
+            } else if (indice2 == 1){
+                for(int i = 0; i< beers.size(); i++){
+                    Beer beer = beers.get(i);
+                    if(beer.ABV >= 6){
                         beers.remove(i);
+                    }
+                }
             }
         } else if (indice1 == 0) {
             //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.

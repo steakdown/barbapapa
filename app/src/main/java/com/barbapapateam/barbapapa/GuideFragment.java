@@ -138,14 +138,14 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
             for (int i = 0; i < beers.size(); i++) {
                 Beer beer = beers.get(i);
-                if (beer.bottle != bottle[indice2]){
+                if (beer.getBottle() != bottle[indice2]){
                     beers.remove(i);
                 }
             }
         } else if (indice1 == 1) { //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
             for (int i = 0; i < beers.size(); i++) {
                 Beer beer = beers.get(i);
-                if (beer.color.equals(attributes[indice1][indice2])){
+                if (beer.getColor().equals(attributes[indice1][indice2])){
                     beers.remove(i);
                 }
             }
@@ -171,19 +171,19 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.advanced_recommandation, container, false);
 
         //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
-        LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext());
+        beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext());
 
         //Zone de texte contenant la question
         t1 = (TextView) view.findViewById(R.id.ARtextView);
 
 
         //connection des boutons entre model et view
-        ImageButton noB = (ImageButton) view.findViewById(R.id.imageButtonCross);
         ImageButton yesB = (ImageButton) view. findViewById(R.id.imageButtonValid);
+        ImageButton noB = (ImageButton) view.findViewById(R.id.imageButtonCross);
         ImageButton goBackB = (ImageButton) view.findViewById(R.id.imageButtonBack);
 
-        noB.setOnClickListener(this);
         yesB.setOnClickListener(this);
+        noB.setOnClickListener(this);
         goBackB.setOnClickListener(this);
 
         // Inflate the layout for this fragment

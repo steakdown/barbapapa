@@ -18,7 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
-import android.widget.ImageButton;
+import android.widget.
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -80,19 +80,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //LaunchAdvancedRecommandationActivity();
+
+
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
 
                 //LaunchAdvancedRecommandationActivity();
-
-
-
                 //LaunchCommandActivity();
-
-                //LaunchBarmanActivity();
-
+                LaunchBarmanActivity();
                 //LaunchNotationActivity();
-
             }
         });
 
@@ -102,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ListFragment(), "Liste");
-        adapter.addFragment(new TwoFragment(), "TWO");
+        adapter.addFragment(new GuideFragment(), "TWO");
         viewPager.setAdapter(adapter);
     }
 

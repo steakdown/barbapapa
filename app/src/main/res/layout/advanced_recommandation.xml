@@ -32,11 +32,11 @@
         <ImageButton
             android:id="@+id/imageButtonCross"
             android:layout_width="69dp"
-            android:layout_height="76dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.01"
+            android:background="@null"
             android:onClick="onClick"
-            android:src="@drawable/ic_cross"
-            android:background="@null"/>
+            android:src="@drawable/ic_cross" />
 
         <ImageButton
             android:id="@+id/imageButtonBack"
@@ -50,7 +50,7 @@
         <ImageButton
             android:id="@+id/imageButtonValid"
             android:layout_width="69dp"
-            android:layout_height="match_parent"
+            android:layout_height="94dp"
             android:layout_weight="0.01"
             android:onClick="onClick"
             android:src="@drawable/ic_yes"

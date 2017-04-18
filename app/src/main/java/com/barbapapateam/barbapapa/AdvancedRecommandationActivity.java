@@ -49,9 +49,9 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
 
 
     //Affiche le résultat de la recherche
-    private void getResult(){
-        //Affiche la liste des résultats.
-        t1.setText("TOUT MARCHE BIEN !");
+    private LinkedList<Beer> getResult(){
+        //Affiche la liste des bières correspondantes
+        return beers;
     }
 
     //Permet de passer à la question principale suivante
@@ -116,11 +116,13 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 //L'utilisateur veut une bière forte
                 //Dans le cas du degré, on doit faire un prétraite car ABV est un float
                 if(indice2 == 0)
+
                     if(beer.getABVfloat() <= 6)
                         beers.remove(i);
                 //L'utilisateur veut une bière douce.
                 else
                     if(beer.getABVfloat()>6)
+
                         beers.remove(i);
             }
         } else if (indice1 == 0) {

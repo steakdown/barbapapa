@@ -47,8 +47,9 @@ public class Utils {
                 float beerABV = Float.parseFloat(jsonBeer.getString("ABV"));
                 float beerPrice = Float.parseFloat(jsonBeer.getString("price"));
                 boolean beerBottle = jsonBeer.getString("bottle").equals("true");
+                String path = jsonBeer.getString("path");
 
-                Beer beer = new Beer(beerName, beerPrice, "", null, beerType, beerColor, beerABV, beerBottle);
+                Beer beer = new Beer(beerName, beerPrice, path, null, beerType, beerColor, beerABV, beerBottle);
                 beers.push(beer);
             }
         } catch (JSONException e) {

@@ -16,8 +16,7 @@ import java.util.LinkedList;
 
 public class AdvancedRecommandationActivity extends Activity implements View.OnClickListener {
 
-    //Zone de texte contenant la question
-    TextView t1;
+
 
     /* Pour les questions, on choisira des questions ayant pour réponse "oui" ou "non""
      ex : -Voulez-vous une bière forte ?
@@ -26,6 +25,9 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
           NextQuestion();
      Dans un 1er temps, l'utilisateur devra toujours valider en cliquant sur "Oui" pour passer à la question suivante.
     */
+
+    //Zone de texte contenant la question
+    TextView t1;
 
     //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
     LinkedList<Beer> beers;

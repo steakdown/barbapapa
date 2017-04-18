@@ -2,6 +2,7 @@ package com.barbapapateam.barbapapa;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.LinkedList;
@@ -22,14 +24,21 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
     LinkedList<Beer> beers;
 
+    ImageView v1;
+
     public GuideFragment() {
         // Required empty public constructor
     }
 
+    int[] imageList1 = {R.drawable.pression,R.drawable.bouteille};
+    int[] imageList2 = {R.drawable.blonde,R.drawable.blanch,R.drawable.ambree,R.drawable.brune};
+    int[] imageList3 = {R.drawable.forte,R.drawable.douce};
+    int[][] myImageList = {imageList1,imageList2,imageList3};
+
     //On distinguera les questions en questions principales (question1, 2 et 3) et questions secondaires (contenue des question1, 2 et 3)
-    String[] question1 = {"Voulez vous une bière en Pression ?", "Donc plutôt en bouteille ?"};
-    String[] question2 = {"Voulez vous une bière Blonde ?", "Plutôt blanche donc ?" ,"Plutôt ambrée du coup ? ", "Non plus ? Plutôt brune alors ?"};
-    String[] question3 = {"Voulez vous une bière forte ?", "On part sur une bière plutôt douce donc ?"};
+    private String[] question1 = {"Voulez vous une bière en Pression ?", "Donc plutôt en bouteille ?"};
+    private String[] question2 = {"Voulez vous une bière Blonde ?", "Plutôt blanche donc ?" ,"Plutôt ambrée du coup ? ", "Non plus ? Plutôt brune alors ?"};
+    private String[] question3 = {"Voulez vous une bière forte ?", "On part sur une bière plutôt douce donc ?"};
 
     private String[][] questions = {question1, question2, question3};
 
@@ -40,7 +49,8 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
     private String[][] attributes = {{},color, degre};
     private int indice1 = 0 ;
     private int indice2 = 0 ;
-    String question = questions[0][0];
+    private String question = questions[0][0];
+    private int image = myImageList[0][0];
 
 
     //Affiche le résultat de la recherche
@@ -74,6 +84,8 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             indice2 = 0;
             question = questions[indice1][indice2];
             t1.setText(question);
+            image = myImageList[indice1][indice2];
+            v1.setImageResource(image);
         }
     }
 
@@ -86,6 +98,8 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             indice2 = 0;
             question = questions[indice1][indice2];
             t1.setText(question);
+            image = myImageList[indice1][indice2];
+            v1.setImageResource(image);
         }
     }
 
@@ -96,25 +110,32 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
             if (indice2 == 2) {
                 indice2 = 0;
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             } else {
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             }
         } else if (indice1 == 1) {
             if (indice2 == 4) {
                 indice2 = 0;
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             } else {
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             }
         } else {
             if(indice2 == 2 ){
                 indice2 = 0;
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             } else {
                 question = questions[indice1][indice2];
+                image = myImageList[indice1][indice2];
             }
         }
         t1.setText(question);
+        v1.setImageResource(image);
     }
 
     // L'utilisateur répond oui
@@ -176,9 +197,11 @@ public class GuideFragment extends Fragment implements View.OnClickListener {
         //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
         beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext());
 
+
         //Zone de texte contenant la question
         t1 = (TextView) view.findViewById(R.id.ARtextView);
 
+        v1 = (ImageView) view.findViewById(R.id.ARImageView);
 
         //connection des boutons entre model et view
         ImageButton yesB = (ImageButton) view. findViewById(R.id.imageButtonValid);

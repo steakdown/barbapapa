@@ -1,30 +1,20 @@
 package com.barbapapateam.barbapapa;
 
-/**
- * Created by Thomas on 16/04/2017.
- */
-
-import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.LinkedList;
 
-public class AdvancedRecommandationActivity extends Activity implements View.OnClickListener {
 
-
-
-    /* Pour les questions, on choisira des questions ayant pour réponse "oui" ou "non""
-     ex : -Voulez-vous une bière forte ?
-          -Non.
-          -Plutôt douce ?.
-          NextQuestion();
-     Dans un 1er temps, l'utilisateur devra toujours valider en cliquant sur "Oui" pour passer à la question suivante.
-    */
+public class GuideFragment extends Fragment implements View.OnClickListener {
 
     //Zone de texte contenant la question
     TextView t1;
@@ -32,6 +22,9 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
     LinkedList<Beer> beers;
 
+    public GuideFragment() {
+        // Required empty public constructor
+    }
 
     //On distinguera les questions en questions principales (question1, 2 et 3) et questions secondaires (contenue des question1, 2 et 3)
     String[] question1 = {"Voulez vous une bière en Pression ?", "Donc plutôt en bouteille ?"};
@@ -70,14 +63,13 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
             }
         }
         return myBeer;
-
     }
 
     //Permet de passer à la question principale suivante
     private void getNextQuestion(){
         indice1++;
         if(indice1 == 3){
-            getResult();
+            LaunchCommandActivity(getMyBeer());
         } else {
             indice2 = 0;
             question = questions[indice1][indice2];
@@ -130,17 +122,20 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     private void yes(){
         //On supprime des éléments de la liste.
         if (indice1 == 2){
-            for(int i = 0; i< beers.size(); i++){
-                Beer beer = beers.get(i);
-                //L'utilisateur veut une bière forte
-                //Dans le cas du degré, on doit faire un prétraite car ABV est un float
-                if(indice2 == 0)
-                    if(beer.ABV <= 6)
+            if(indice2 == 0){
+                for(int i = 0; i< beers.size(); i++){
+                    Beer beer = beers.get(i);
+                    if(beer.ABV < 6){
                         beers.remove(i);
-                        //L'utilisateur veut une bière douce.
-                    else
-                    if(beer.ABV >6)
+                    }
+                }
+            } else if (indice2 == 1){
+                for(int i = 0; i< beers.size(); i++){
+                    Beer beer = beers.get(i);
+                    if(beer.ABV >= 6){
                         beers.remove(i);
+                    }
+                }
             }
         } else if (indice1 == 0) {
             //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
@@ -168,34 +163,48 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.advanced_recommandation);
-
-        /*//Ajout d'une bar d'action
-        ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);*/
-
-        //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
-        beers = Utils.getBeersFromJSON("beers.json", this);
-
-        //Zone de texte contenant la question
-        t1 = (TextView) findViewById(R.id.ARtextView);
-
-
-        //connection des boutons entre model et view
-        ImageButton noB = (ImageButton) findViewById(R.id.imageButtonCross);
-        ImageButton yesB = (ImageButton) findViewById(R.id.imageButtonValid);
-        ImageButton goBackB = (ImageButton) findViewById(R.id.imageButtonBack);
-
-        noB.setOnClickListener(this);
-        yesB.setOnClickListener(this);
-        goBackB.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        switch(v.getId()){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.advanced_recommandation, container, false);
+
+        //On charge les bière dans une liste, et en fonction des réponses aux questions, on supprimera des éléments de la liste
+        beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext());
+
+        //Zone de texte contenant la question
+        t1 = (TextView) view.findViewById(R.id.ARtextView);
+
+
+        //connection des boutons entre model et view
+        ImageButton yesB = (ImageButton) view. findViewById(R.id.imageButtonValid);
+        ImageButton noB = (ImageButton) view.findViewById(R.id.imageButtonCross);
+        ImageButton goBackB = (ImageButton) view.findViewById(R.id.imageButtonBack);
+
+        yesB.setOnClickListener(this);
+        noB.setOnClickListener(this);
+        goBackB.setOnClickListener(this);
+
+        // Inflate the layout for this fragment
+        return view;
+    }
+
+
+    private void LaunchCommandActivity(Beer beer) {
+
+        Intent commandIntent = new Intent(this.getContext(), CommandActivity.class);
+        commandIntent.putExtra("BEER", beer);
+        startActivity(commandIntent);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
             case R.id.imageButtonCross:
                 no();
                 break;
@@ -209,28 +218,4 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 break;
         }
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
 }

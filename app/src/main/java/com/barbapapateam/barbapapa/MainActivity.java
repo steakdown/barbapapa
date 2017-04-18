@@ -1,7 +1,6 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -14,11 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import static com.barbapapateam.barbapapa.Database.*;
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ListFragment(), "Liste");
-        adapter.addFragment(new TwoFragment(), "TWO");
+        adapter.addFragment(new GuideFragment(), "TWO");
         viewPager.setAdapter(adapter);
     }
 

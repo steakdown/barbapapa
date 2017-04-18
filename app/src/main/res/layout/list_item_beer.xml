@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:id="@+id/beer_photo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/punk_ipa"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beer_name"
+        android:layout_toRightOf="@+id/beer_photo"
+        android:layout_alignParentTop="true"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryText"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beer_price"
+        android:layout_toRightOf="@+id/beer_photo"
+        android:layout_below="@+id/beer_name"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beer_ABV"
+        android:layout_toRightOf="@+id/beer_price"
+        android:layout_below="@+id/beer_name"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_marginRight="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/beer_type"
+        android:layout_toRightOf="@+id/beer_ABV"
+        android:layout_below="@+id/beer_name"
+        android:textColor="@color/colorSecondaryText"
+        />
+
+</RelativeLayout>

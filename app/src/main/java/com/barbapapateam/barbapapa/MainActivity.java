@@ -1,9 +1,9 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -14,19 +14,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.json.*;
-
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
-    public LinkedList<Beer> beers;
+    private ListView beerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,20 +44,34 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
+
                 LaunchAdvancedRecommandationActivity();
+
+
+
+                //LaunchCommandActivity();
+
+                //LaunchBarmanActivity();
+
+                //LaunchNotationActivity();
+
             }
         });
 
-        // NOTE(hugo) : Creating beer list
-        beers = Utils.getBeersFromJSON("beers.json", this);
+        if(!Database.initialized)
+        {
+            Database.initDb(this);
+        }
+
     }
 
     private void setupViewPager(ViewPager viewPager)
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "ONE");
+        adapter.addFragment(new ListFragment(), "Liste");
         adapter.addFragment(new TwoFragment(), "TWO");
         viewPager.setAdapter(adapter);
     }
@@ -124,5 +137,21 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent ARIntent = new Intent(this, AdvancedRecommandationActivity.class);
         startActivity(ARIntent);
+    }
+
+    private void LaunchCommandActivity() {
+
+        Beer beer = new Beer("Test", (float)2, R.drawable.affligem, null, "Trappist", "Test2", (float) 3, true);
+        Intent commandIntent = new Intent(this, CommandActivity.class);
+        commandIntent.putExtra("BEER", beer);
+        startActivity(commandIntent);
+
+    }
+
+    private void LaunchNotationActivity()
+    {
+        Intent notationIntent = new Intent(this, NotationActivity.class);
+        startActivity(notationIntent);
+
     }
 }

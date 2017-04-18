@@ -49,9 +49,25 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
 
 
     //Affiche le résultat de la recherche
-    private void getResult(){
-        //Affiche la liste des résultats.
-        t1.setText("TOUT MARCHE BIEN !");
+    private LinkedList<Beer> getResult(){
+        //Affiche la liste des bières correspondantes
+        return beers;
+    }
+
+    //Fonction proposant la bière la mieux notée correspondant aux goûts de l'utilisateur
+    public Beer getMyBeer(){
+        LinkedList<Beer> listResult = getResult();
+        Beer myBeer = listResult.getFirst();
+        if(myBeer == null){
+            //Afficher un message comme quoi il n'y a aucune réponse
+        } else {
+            for (int i = 1; i< listResult.size(); i++){
+                if(listResult.get(i).getNote()> myBeer.getNote()){
+                    myBeer = listResult.get(i);
+                }
+            }
+        }
+        return myBeer;
     }
 
     //Permet de passer à la question principale suivante
@@ -82,26 +98,26 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
     private void getNextNuance(){
         indice2++;
         if (indice1 == 0) {
-           if (indice2 == 2) {
-               indice2 = 0;
-               question = questions[indice1][indice2];
-           } else {
-               question = questions[indice1][indice2];
-           }
-       } else if (indice1 == 1) {
-           if (indice2 == 4) {
-               indice2 = 0;
-               question = questions[indice1][indice2];
-           } else {
-               question = questions[indice1][indice2];
-           }
-       } else {
-           if(indice2 == 2 ){
-               indice2 = 0;
-               question = questions[indice1][indice2];
-           } else {
-               question = questions[indice1][indice2];
-           }
+            if (indice2 == 2) {
+                indice2 = 0;
+                question = questions[indice1][indice2];
+            } else {
+                question = questions[indice1][indice2];
+            }
+        } else if (indice1 == 1) {
+            if (indice2 == 4) {
+                indice2 = 0;
+                question = questions[indice1][indice2];
+            } else {
+                question = questions[indice1][indice2];
+            }
+        } else {
+            if(indice2 == 2 ){
+                indice2 = 0;
+                question = questions[indice1][indice2];
+            } else {
+                question = questions[indice1][indice2];
+            }
         }
         t1.setText(question);
     }
@@ -116,11 +132,11 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 //L'utilisateur veut une bière forte
                 //Dans le cas du degré, on doit faire un prétraite car ABV est un float
                 if(indice2 == 0)
-                    if(beer.getABVfloat() <= 6)
+                    if(beer.ABV <= 6)
                         beers.remove(i);
-                //L'utilisateur veut une bière douce.
-                else
-                    if(beer.getABVfloat()>6)
+                        //L'utilisateur veut une bière douce.
+                    else
+                    if(beer.ABV >6)
                         beers.remove(i);
             }
         } else if (indice1 == 0) {
@@ -132,13 +148,13 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 }
             }
         } else if (indice1 == 1) { //pour les autres question, les listes dans attributes correspondent a la valeur des attributs de Beer.
-                for (int i = 0; i < beers.size(); i++) {
-                    Beer beer = beers.get(i);
-                    if (beer.getColor().equals(attributes[indice1][indice2])){
-                        beers.remove(i);
-                    }
+            for (int i = 0; i < beers.size(); i++) {
+                Beer beer = beers.get(i);
+                if (beer.getColor().equals(attributes[indice1][indice2])){
+                    beers.remove(i);
                 }
             }
+        }
         //On passe à la question suivante.
         getNextQuestion();
     }
@@ -213,6 +229,5 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }

@@ -22,27 +22,13 @@ public class BeerAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mInflater;
     private LinkedList<Beer> mDataSource;
-    private Hashtable<String, Integer> imageIDs;
+
 
     public BeerAdapter(Context context, LinkedList<Beer> items) {
         mContext = context;
         mDataSource = items;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        imageIDs = new Hashtable<String, Integer>();
-        imageIDs.put("Kwak", R.drawable.kwak);
-        imageIDs.put("Delirium", R.drawable.delirium);
-        imageIDs.put("Tripel Karmeliet", R.drawable.karmeliet);
-        imageIDs.put("Leffe", R.drawable.leffe);
-        imageIDs.put("Desperados", R.drawable.desperados);
-        imageIDs.put("Kriek", R.drawable.kriek);
-        imageIDs.put("Punk", R.drawable.punk);
-        imageIDs.put("Cuvée des Trolls", R.drawable.trolls);
-        imageIDs.put("1664 Blanc", R.drawable.seize);
-        imageIDs.put("Pêcheresse", R.drawable.pecheresse);
-        imageIDs.put("Elephant", R.drawable.elephant);
-        imageIDs.put("Kronenbourg", R.drawable.kronenbourg);
-        imageIDs.put("Grimbergen Blanche", R.drawable.blanche);
-        imageIDs.put("Grimbergen Double Ambrée", R.drawable.grim_ambree);
+
     }
 
     //1
@@ -88,7 +74,7 @@ public class BeerAdapter extends BaseAdapter {
         beerPrice.setText(beer.price + "€");
         beerType.setText(beer.type);
 
-        Picasso.with(mContext).load(imageIDs.get(beer.name)).into(thumbnail);
+        Picasso.with(mContext).load(Database.getImageIdFromName(beer.name)).into(thumbnail);
 
         return rowView;
     }

@@ -39,9 +39,7 @@ public class CommandActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.command_layout);
 
-
-        Intent intent = getIntent();
-        beer = (Beer) intent.getSerializableExtra("BEER");
+        beer = Database.getBeerForCommand();
 
 
         TextView beerText = (TextView) findViewById(R.id.beerText);

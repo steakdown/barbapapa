@@ -83,7 +83,7 @@ public class BeerAdapter extends BaseAdapter {
         ImageView thumbnail = (ImageView) rowView.findViewById(R.id.beer_photo);
 
         Beer beer = (Beer) getItem(position);
-        beerName.setText(imageIDs.get(beer.name));
+        beerName.setText(beer.name);
         beerABV.setText(beer.ABV + "%");
         beerPrice.setText(beer.price + "€");
         beerType.setText("Style : " + beer.type);

@@ -14,6 +14,8 @@ public class Database {
     static LinkedList<Command> commands;
     static boolean initialized = false;
 
+	static int chosenBeerIndex;
+
     static void initDb(Context context)
     {
         beers = Utils.getBeersFromJSON("beers.json", context);

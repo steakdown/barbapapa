@@ -8,7 +8,6 @@
         android:id="@+id/beer_photo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/punk_ipa"
         android:scaleType="fitCenter"
         android:layout_marginRight="16dp"
         />

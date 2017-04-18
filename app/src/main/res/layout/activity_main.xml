@@ -24,46 +24,51 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 android:fitsSystemWindows="true"
-                app:popupTheme="@style/AppTheme.PopupOverlay" >
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.78"
                     android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/drawerButton"
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.02"
+                        android:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_drawer" />
 
                     <ImageButton
                         android:id="@+id/babarButton"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/ic_babar"
                         android:backgroundTint="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_babar"
                         tools:ignore="VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Babar Mobile"
-                        android:textSize="25sp"
+                        android:layout_weight="0.62"
                         android:gravity="center"
-                        android:layout_weight="0.40" />
+                        android:text="Babar Mobile"
+                        android:textSize="23sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.23"
-                        app:srcCompat="@drawable/ic_search_black_24dp"
+                        android:layout_height="match_parent"
                         android:backgroundTint="@color/colorPrimary"
-                        android:tint="#FFFF"/>
+                        android:tint="#FFFF"
+                        app:srcCompat="@drawable/ic_search_black_24dp" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
-
-        <include layout="@layout/content_main"/>
-
 
 
         <android.support.design.widget.FloatingActionButton
@@ -73,6 +78,8 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@drawable/ic_babar" />
+
+        <include layout="@layout/content_main" />
 
     </android.support.design.widget.CoordinatorLayout>
 

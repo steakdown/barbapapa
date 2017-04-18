@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private DrawerLayout menuDrawerLayout;
+    private NavigationView drawer;
     private ListView beerList;
 
     @Override
@@ -49,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         //setting up the drawerLayout (menu latéral)
         menuDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawer = (NavigationView) findViewById(R.id.left_drawer);
+        drawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                selectDrawerItem(menuItem);
+                return true;
+            }
+        });
 
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -57,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        ImageButton babar = (ImageButton) findViewById(R.id.babarButton);
-        babar.setOnClickListener(new View.OnClickListener() {
+        ImageButton drawerButton = (ImageButton) findViewById(R.id.drawerButton);
+        drawerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 menuDrawerLayout.openDrawer(GravityCompat.START);
@@ -141,14 +151,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 return true;
 
-            case R.id.home:
-                menuDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-
         }
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void selectDrawerItem(MenuItem menuItem)
+    {
+        switch(menuItem.getItemId())
+        {
+            case R.id.guide:
+
+                menuDrawerLayout.closeDrawers();
+                LaunchAdvancedRecommandationActivity();
+                break;
+
+            case R.id.recommandee:
+                break;
+        }
     }
 
     private void LaunchBarmanActivity()

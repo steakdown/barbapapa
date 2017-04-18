@@ -5,11 +5,22 @@
             android:id="@+id/profile"
             android:title="Profil" />
         <item
+            android:id="@+id/list"
+            android:title="Liste" />
+        <item
+            android:id="@+id/guide"
+            android:title="Le guide"/>
+        <item
             android:id="@+id/recommandee"
             android:title="Recommandées" />
         <item
+            android:id="@+id/about"
+            android:title="À propos" />
+        <item
             android:id="@+id/sign_out"
             android:title="Deconnexion" />
+
+
 
     </group>
 </menu>

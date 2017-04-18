@@ -1,54 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/beer_photo"
         android:layout_width="70dp"
         android:layout_height="100dp"
-        android:id="@+id/beer_photo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
         android:scaleType="fitCenter"
-        android:layout_marginRight="16dp"
-        />
+        android:src="@drawable/blanche"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="4dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/beer_name"
-        android:layout_toRightOf="@+id/beer_photo"
-        android:layout_alignParentTop="true"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimaryText"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/beer_price"
-        android:layout_toRightOf="@+id/beer_photo"
-        android:layout_below="@+id/beer_name"
-        android:textColor="@color/colorSecondaryText"
-        android:layout_marginRight="16dp"
-        />
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/beer_ABV"
-        android:layout_toRightOf="@+id/beer_price"
-        android:layout_below="@+id/beer_name"
-        android:textColor="@color/colorSecondaryText"
-        android:layout_marginRight="16dp"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="2dp"
+        android:maxLines="1"
+        android:paddingEnd="4dp"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="22sp"
+        tools:text="2,80€"
+        android:layout_alignParentRight="true"
+        android:paddingRight="4dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="4dp" />
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/beer_list_text_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/beer_type"
-        android:layout_toRightOf="@+id/beer_ABV"
-        android:layout_below="@+id/beer_name"
-        android:textColor="@color/colorSecondaryText"
-        />
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/beer_photo"
+        android:layout_toStartOf="@id/beer_price"
+        android:layout_toLeftOf="@id/beer_photo"
+        android:layout_toRightOf="@id/beer_price">
 
+        <TextView
+            android:id="@+id/beer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="22sp"
+            tools:text="Grimbergen Blanche"
+            android:textColor="@color/colorPrimaryText"
+            />
+
+        <TextView
+            android:id="@+id/beer_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            tools:text="Witbier"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/beer_ABV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_toRightOf="@id/beer_type"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            tools:text="6%"
+            />
+
+    </RelativeLayout>
 </RelativeLayout>

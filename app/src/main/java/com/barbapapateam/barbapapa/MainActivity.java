@@ -1,11 +1,16 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
+import android.widget.
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -24,27 +30,50 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private DrawerLayout menuDrawerLayout;
+    private NavigationView drawer;
     private ListView beerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         if(!Database.initialized)
         {
             initDb(this);
         }
 
-        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        //setting up the drawerLayout (menu latéral)
+        menuDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawer = (NavigationView) findViewById(R.id.left_drawer);
+        drawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                selectDrawerItem(menuItem);
+                return true;
+            }
+        });
+
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        ImageButton drawerButton = (ImageButton) findViewById(R.id.drawerButton);
+        drawerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -112,17 +141,33 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
+        switch(item.getItemId())
+        {
+            case R.id.action_settings:
+                return true;
+
         }
 
+
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void selectDrawerItem(MenuItem menuItem)
+    {
+        switch(menuItem.getItemId())
+        {
+            case R.id.guide:
+
+                menuDrawerLayout.closeDrawers();
+                LaunchAdvancedRecommandationActivity();
+                break;
+
+            case R.id.recommandee:
+                break;
+        }
     }
 
     private void LaunchBarmanActivity()
@@ -152,4 +197,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(notationIntent);
 
     }
+
 }

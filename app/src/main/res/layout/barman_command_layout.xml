@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-	android:layout_height="wrap_content"
-	android:descendantFocusability="blocksDescendants">
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
 
-	<TextView
-		android:id="@+id/textCommand"
+	<ImageView
+		android:id="@+id/beer_photo"
+		android:layout_width="70dp"
+		android:layout_height="100dp"
+		android:layout_alignParentStart="true"
+		android:layout_centerVertical="true"
+		android:layout_marginBottom="6dp"
+		android:layout_marginStart="4dp"
+		android:layout_marginTop="6dp"
+		android:scaleType="fitCenter"
+		android:src="@drawable/blanche"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="4dp" />
+
+	<RelativeLayout
+		android:id="@+id/beer_list_text_layout"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="TextView" />
+		android:layout_centerVertical="true"
+		android:layout_toEndOf="@id/beer_photo"
+		android:layout_toLeftOf="@id/beer_photo">
+
+		<TextView
+			android:id="@+id/beer_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:textSize="22sp"
+			tools:text="Grimbergen Blanche"
+			android:textColor="@color/colorPrimaryText"
+			/>
+
+		<TextView
+			android:id="@+id/client_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/beer_name"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="2dp"
+			android:ellipsize="end"
+			android:gravity="center"
+			android:textSize="16sp"
+			tools:text="Witbier" />
+
+	</RelativeLayout>
 </RelativeLayout>

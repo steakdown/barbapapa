@@ -51,8 +51,8 @@ public class BarmanActivity extends AppCompatActivity
 
         ListView commandList = (ListView) findViewById(R.id.commandList);
 
-        String from[]  = {"name"};
-        int to[] = {R.id.textCommand};
+        String from[]  = {"beer_name", "client_name"};
+        int to[] = {R.id.beer_name, R.id.client_name};
         int commandLayoutResId = R.layout.barman_command_layout;
 
         LinkedList<HashMap<String, String>> commands = new LinkedList<HashMap<String, String>>();
@@ -60,8 +60,9 @@ public class BarmanActivity extends AppCompatActivity
         {
             HashMap<String,String> commandMap = new HashMap<>();
             Command command = Database.commands.get(Index);
-            String text = command.beer.name + " (" + command.beerCount + ") - " + command.clientName;
-            commandMap.put("name", text);
+            String text = command.beer.name + " (" + command.beerCount + ")";
+            commandMap.put("beer_name", text);
+            commandMap.put("client_name", command.clientName);
             commands.add(commandMap);
         }
         commandList.setAdapter(new SimpleAdapter(this, commands, commandLayoutResId, from, to));

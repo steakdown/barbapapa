@@ -59,19 +59,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="0dp"
-                android:orientation="horizontal">
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/beerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
                     android:layout_gravity="center"
                     android:gravity="center_vertical|center"
                     android:text="BeerName"
@@ -80,16 +74,11 @@
                     android:textSize="30sp"
                     android:typeface="normal"></TextView>
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
                 <RatingBar
                     android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
+                    android:layout_gravity="center"
                     android:clickable="false"
                     android:contextClickable="false"
                     android:elevation="0dp"
@@ -99,7 +88,6 @@
                     android:rating="2.5"
                     android:stepSize="0.5"
                     android:textAlignment="gravity" />
-
             </LinearLayout>
 
         </LinearLayout>
@@ -151,7 +139,7 @@
             <ImageView
                 android:id="@+id/beerPhoto"
                 android:layout_width="match_parent"
-                android:layout_height="254dp"
+                android:layout_height="185dp"
                 android:minHeight="216dp"
                 tools:mockup="@drawable/affligem" />
 
@@ -202,7 +190,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/commanderButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"

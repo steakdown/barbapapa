@@ -18,6 +18,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.barbapapateam.barbapapa.Database.*;
+
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
@@ -26,7 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        if(!Database.initialized)
+        {
+            initDb(this);
+        }
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,26 +51,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //LaunchAdvancedRecommandationActivity();
+
+
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
 
-                LaunchAdvancedRecommandationActivity();
-
-
-
+                //LaunchAdvancedRecommandationActivity();
                 //LaunchCommandActivity();
-
                 //LaunchBarmanActivity();
-
-                //LaunchNotationActivity();
-
+                LaunchNotationActivity();
             }
         });
-
-        if(!Database.initialized)
-        {
-            Database.initDb(this);
-        }
 
     }
 
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LaunchCommandActivity() {
 
-        Beer beer = new Beer("Test", (float)2, R.drawable.affligem, null, "Trappist", "Test2", (float) 3, true);
+        Beer beer = new Beer("Test", (float)2, null, "Trappist", "Test2", (float) 3, true);
         Intent commandIntent = new Intent(this, CommandActivity.class);
         commandIntent.putExtra("BEER", beer);
         startActivity(commandIntent);

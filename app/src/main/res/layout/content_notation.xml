@@ -19,7 +19,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="313dp"
+            android:layout_width="match_parent"
             android:layout_height="240dp"
             app:srcCompat="@drawable/ic_babar"
             tools:layout_editor_absoluteX="57dp"
@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="314dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Notez votre bière"
@@ -38,7 +38,7 @@
         <SeekBar
             android:id="@+id/seekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="313dp"
+            android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_weight="0.20"
             android:max="5"
@@ -48,20 +48,20 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="314dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView" />
 
         <Button
             android:id="@+id/button_add_note"
-            android:layout_width="315dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Valider" />
 
         <Button
             android:id="@+id/button_back_to_menu"
-            android:layout_width="315dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Retour au menu" />
     </LinearLayout>

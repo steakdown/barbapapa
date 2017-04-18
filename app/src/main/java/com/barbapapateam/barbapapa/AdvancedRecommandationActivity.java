@@ -70,6 +70,7 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
             }
         }
         return myBeer;
+
     }
 
     //Permet de passer à la question principale suivante

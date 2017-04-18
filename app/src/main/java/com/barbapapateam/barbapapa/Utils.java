@@ -49,7 +49,7 @@ public class Utils {
                 boolean beerBottle = jsonBeer.getString("bottle").equals("true");
                 String path = jsonBeer.getString("path");
 
-                Beer beer = new Beer(beerName, beerPrice, 0, null, beerType, beerColor, beerABV, beerBottle);
+                Beer beer = new Beer(beerName, beerPrice, null, beerType, beerColor, beerABV, beerBottle);
                 beers.push(beer);
             }
         } catch (JSONException e) {

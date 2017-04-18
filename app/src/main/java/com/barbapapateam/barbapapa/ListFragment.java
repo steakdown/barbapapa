@@ -30,13 +30,7 @@ public class ListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         ListView beerList = (ListView) view.findViewById(R.id.beer_list_view);
 
-        LinkedList<Beer> beers = Utils.getBeersFromJSON("beers.json", getActivity().getApplicationContext()); /*
-        String[] names = new String[beers.size()];
-        for(int i = 0; i < beers.size(); i++){
-            Beer beer = beers.get(i);
-            names[i] = beer.name;
-        }
-        ArrayAdapter adapter = new ArrayAdapter(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, names);*/
+        LinkedList<Beer> beers = Database.beers;
         BeerAdapter adapter = new BeerAdapter(getActivity().getApplicationContext(), beers);
         beerList.setAdapter(adapter);
 
@@ -45,8 +39,8 @@ public class ListFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Beer beer = (Beer) parent.getItemAtPosition(position);
-
-                LaunchCommandActivity(beer);
+                Database.setBeerForCommand(beer);
+                LaunchCommandActivity();
             }
         });
 
@@ -54,11 +48,9 @@ public class ListFragment extends Fragment {
     }
 
 
-    private void LaunchCommandActivity(Beer beer) {
+    private void LaunchCommandActivity() {
 
         Intent commandIntent = new Intent(this.getContext(), CommandActivity.class);
-        commandIntent.putExtra("BEER", beer);
         startActivity(commandIntent);
-
     }
 }

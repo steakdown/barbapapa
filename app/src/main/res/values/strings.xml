@@ -6,4 +6,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_notation">NotationActivity</string>
+    <string-array name="sort_options">
+        <item>Trier par...</item>
+        <item>Prix</item>
+        <item>Degré d\'alcool</item>
+        <item>Alphabétique</item>
+    </string-array>
 </resources>

@@ -3,11 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:id="@+id/sort_layout">
+        <Spinner
+            android:id="@+id/sort_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 
     <ListView
         android:id="@+id/beer_list_view"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_below="@+id/sort_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     </ListView>
 
 </RelativeLayout>

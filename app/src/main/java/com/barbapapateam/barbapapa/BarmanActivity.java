@@ -23,6 +23,8 @@ import java.util.LinkedList;
 public class BarmanActivity extends AppCompatActivity 
 {
 
+	static boolean debugInitialized = false;
+
     private void createDummyCommandList()
     {
 
@@ -40,13 +42,17 @@ public class BarmanActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        createDummyCommandList();
+		if(!debugInitialized)
+		{
+			createDummyCommandList();
+			debugInitialized = true;
+		}
 
 
         ListView commandList = (ListView) findViewById(R.id.commandList);
 
         String from[]  = {"name"};
-        int to[] = {R.id.checkBox};
+        int to[] = {R.id.textCommand};
         int commandLayoutResId = R.layout.barman_command_layout;
 
         LinkedList<HashMap<String, String>> commands = new LinkedList<HashMap<String, String>>();
@@ -63,7 +69,8 @@ public class BarmanActivity extends AppCompatActivity
         commandList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Database.commands.remove(position);
+				recreate();
             }
         });
 

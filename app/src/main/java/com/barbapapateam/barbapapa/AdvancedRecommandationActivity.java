@@ -116,11 +116,11 @@ public class AdvancedRecommandationActivity extends Activity implements View.OnC
                 //L'utilisateur veut une bière forte
                 //Dans le cas du degré, on doit faire un prétraite car ABV est un float
                 if(indice2 == 0)
-                    if(beer.getABV() <= 6)
+                    if(beer.getABVfloat() <= 6)
                         beers.remove(i);
                 //L'utilisateur veut une bière douce.
                 else
-                    if(beer.getABV()>6)
+                    if(beer.getABVfloat()>6)
                         beers.remove(i);
             }
         } else if (indice1 == 0) {

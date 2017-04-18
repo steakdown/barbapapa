@@ -23,12 +23,9 @@ public class NotationActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });*/
+		TextView text = (TextView) findViewById(R.id.textView);
+		// TODO(hugo) : Replace Database.beers.get(3) with the chosen beer
+		text.setText("Notez votre bière (" + Database.Database.beers.get(3).name + ")");
 
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -65,10 +62,8 @@ public class NotationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // NOTE(hugo) : Can be improved since it's not _exactly_
                 // the beer from the last command. But should work for the MVP
-
-                //TODO(hugo) : Get rid of this
-                Database.pushCommand(Database.beers.get(0), 1, "Benjamin");
-                Database.commands.getLast().beer.addNote(seekBar.getProgress());
+                Database.beers.get(3).addNote(seekBar.getProgress());
+                LaunchMainActivity();
             }
         });
     }

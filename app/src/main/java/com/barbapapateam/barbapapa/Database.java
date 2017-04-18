@@ -17,6 +17,8 @@ public class Database {
     private static Hashtable<String, Integer> imageIDs;
     private static Beer beerForCommand;
 
+	static int chosenBeerIndex;
+
     static void initDb(Context context)
     {
         imageIDs = new Hashtable<String, Integer>();

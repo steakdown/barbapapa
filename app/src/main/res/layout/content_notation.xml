@@ -57,12 +57,16 @@
             android:id="@+id/button_add_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#FFFF"
             android:text="Valider" />
 
         <Button
             android:id="@+id/button_back_to_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#FFFF"
             android:text="Retour au menu" />
     </LinearLayout>
 

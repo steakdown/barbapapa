@@ -75,24 +75,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                //LaunchAdvancedRecommandationActivity();
-
-
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
-
-                //LaunchAdvancedRecommandationActivity();
-                //LaunchCommandActivity();
-                LaunchBarmanActivity();
-                //LaunchNotationActivity();
-            }
-        });
-
     }
 
     private void setupViewPager(ViewPager viewPager)
@@ -160,14 +142,24 @@ public class MainActivity extends AppCompatActivity {
     {
         switch(menuItem.getItemId())
         {
-            case R.id.guide:
-
+            case R.id.list:
                 menuDrawerLayout.closeDrawers();
-                LaunchAdvancedRecommandationActivity();
+                viewPager.setCurrentItem(0);
+                break;
+
+            case R.id.guide:
+                menuDrawerLayout.closeDrawers();
+                viewPager.setCurrentItem(1);
                 break;
 
             case R.id.recommandee:
+                menuDrawerLayout.closeDrawers();
+                viewPager.setCurrentItem(2);
+                break;
 
+            case R.id.debug:
+                menuDrawerLayout.closeDrawers();
+                LaunchBarmanActivity();
                 break;
         }
     }

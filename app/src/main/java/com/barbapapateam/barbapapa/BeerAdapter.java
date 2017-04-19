@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.text.Collator;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.LinkedList;
 
@@ -77,5 +79,38 @@ public class BeerAdapter extends BaseAdapter {
         Picasso.with(mContext).load(Database.getImageIdFromName(beer.name)).into(thumbnail);
 
         return rowView;
+    }
+
+    public void sortBy(int i) {
+        switch (i) {
+            case 1:
+                Collections.sort(mDataSource, new Comparator<Beer>() {
+                    @Override
+                    public int compare(Beer b1, Beer b2) {
+                        if(b1.price > b2.price) return 1;
+                        else if(b1.price < b2.price) return -1;
+                        else return 0;
+                    }
+                });
+                break;
+            case 2:
+                Collections.sort(mDataSource, new Comparator<Beer>() {
+                    @Override
+                    public int compare(Beer b1, Beer b2) {
+                        if(b1.ABV > b2.ABV) return 1;
+                        else if(b1.ABV < b2.ABV) return -1;
+                        else return 0;
+                    }
+                });
+                break;
+            case 3:
+                Collections.sort(mDataSource, new Comparator<Beer>() {
+                    @Override
+                    public int compare(Beer b1, Beer b2){
+                        return Collator.getInstance().compare(b1.name, b2.name);
+                    }
+                });
+                break;
+        }
     }
 }

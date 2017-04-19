@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/ARImageView"
-        android:layout_width="match_parent"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
+        android:src="@drawable/pression"
         android:layout_weight="0.88" />
 
     <TextView

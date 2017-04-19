@@ -25,6 +25,21 @@
             tools:layout_editor_absoluteX="57dp"
             tools:layout_editor_absoluteY="30dp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.50" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Votre commande a été prise en compte"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="298dp" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"

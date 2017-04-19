@@ -38,6 +38,7 @@
                     android:layout_weight="0.40"
                     android:gravity="center"
                     android:text="Commande"
+                    android:textColor="#FFFF"
                     android:textSize="25sp" />
 
                 <ImageButton
@@ -194,9 +195,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"
             android:text="Commander"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#FFFF"
             android:textSize="30sp"
             android:textStyle="bold" />
 

@@ -39,15 +39,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.02"
                         android:backgroundTint="@color/colorPrimary"
+                        android:tint="#FFFF"
                         app:srcCompat="@drawable/ic_drawer" />
-
-                    <ImageButton
-                        android:id="@+id/babarButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="@color/colorPrimary"
-                        app:srcCompat="@drawable/ic_babar"
-                        tools:ignore="VectorDrawableCompat" />
 
                     <TextView
                         android:layout_width="wrap_content"

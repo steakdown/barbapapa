@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ListFragment(), "Liste");
-        adapter.addFragment(new GuideFragment(), "TWO");
+        adapter.addFragment(new GuideFragment(), "Guide");
         adapter.addFragment(new BasicRecomFragment(), "Recomm.");
         viewPager.setAdapter(adapter);
     }

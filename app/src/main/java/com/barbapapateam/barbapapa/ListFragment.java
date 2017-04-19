@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import java.util.LinkedList;
@@ -74,5 +76,19 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void onRadioButtonClicked(View view) {
+        /*boolean checked = ((CheckBox) view).isChecked();
+
+        if(checked)
+            switch(view.getId()) {
+                case R.id.radio_pression:
+                    adapter.getFilter().filter("draught");
+                    break;
+                case R.id.radio_bouteille:
+                    adapter.getFilter().filter("bottle");
+                    break;
+            }*/
     }
 }

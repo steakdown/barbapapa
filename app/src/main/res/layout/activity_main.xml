@@ -39,8 +39,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.02"
                         android:backgroundTint="@color/colorPrimary"
-                        android:tint="#FFFF"
-                        app:srcCompat="@drawable/ic_drawer" />
+                        app:srcCompat="@drawable/ic_menu_white_24px" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -56,7 +55,9 @@
                         android:layout_height="match_parent"
                         android:backgroundTint="@color/colorPrimary"
                         android:tint="#FFFF"
-                        app:srcCompat="@drawable/ic_search_black_24dp" />
+                        app:srcCompat="@drawable/ic_search_black_24dp"
+                        android:showAsAction="collapseActionView|ifRoom"
+                        android:actionViewClass="android.widget.SearchView" />
 
                 </LinearLayout>
 

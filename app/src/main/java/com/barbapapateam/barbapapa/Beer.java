@@ -9,8 +9,8 @@ public class Beer implements Serializable
     public String name;
     public float price;
     public int imageID;
-    public int noteSum;
-    public int noteCount;
+    public float noteSum;
+    public float noteCount;
     //public String imagePath;
     public LinkedList<String> opinions;
     public String type;
@@ -33,7 +33,7 @@ public class Beer implements Serializable
         this.noteCount = 1;
     }
 
-    public int getNote()
+    public float getNote()
     {
         if(noteCount != 0)
             return(noteSum / noteCount);

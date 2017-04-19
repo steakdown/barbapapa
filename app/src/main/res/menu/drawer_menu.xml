@@ -19,6 +19,9 @@
         <item
             android:id="@+id/sign_out"
             android:title="Deconnexion" />
+        <item
+            android:id="@+id/debug"
+            android:title="Barman" />
 
 
 

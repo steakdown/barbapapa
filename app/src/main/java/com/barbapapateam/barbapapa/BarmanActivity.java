@@ -28,9 +28,9 @@ public class BarmanActivity extends AppCompatActivity
     private void createDummyCommandList()
     {
 
-        Command command = new Command(Database.beers.get(0), 2, "Julien");
+        Command command = new Command(Database.beers.get(3), 2, "Julien");
         Database.commands.push(command);
-        command = new Command(Database.beers.get(0), 1, "Sebastian");
+        command = new Command(Database.beers.get(7), 1, "Sebastian");
         Database.commands.push(command);
     }
 

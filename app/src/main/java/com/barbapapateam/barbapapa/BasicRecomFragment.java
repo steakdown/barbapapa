@@ -32,8 +32,15 @@ public class BasicRecomFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         ListView beerList = (ListView) view.findViewById(R.id.beer_list_view);
 
-        LinkedList<Beer> beers = Database.beers;
+        LinkedList<Beer> beers = (LinkedList<Beer>) Database.beers.clone();
         Collections.shuffle(beers, new Random(0));
+
+        if(Database.lastBeerOrdered != null)
+        {
+            beers.remove(Database.lastBeerOrdered);
+            beers.addFirst(Database.lastBeerOrdered);
+        }
+
         BeerAdapter adapter = new BeerAdapter(getActivity().getApplicationContext(), beers);
         beerList.setAdapter(adapter);
 

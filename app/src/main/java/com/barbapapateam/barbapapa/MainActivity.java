@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout menuDrawerLayout;
     private NavigationView drawer;
     private ListView beerList;
+    private ListFragment listFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,4 +200,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        //listFragment.onRadioButtonClicked(view);
+    }
 }

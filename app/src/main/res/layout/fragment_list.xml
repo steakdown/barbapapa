@@ -12,6 +12,23 @@
             android:id="@+id/sort_spinner"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_pression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pression"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginRight="16dp"/>
+            <RadioButton android:id="@+id/radio_bouteille"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bouteille"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
     </LinearLayout>
 
 

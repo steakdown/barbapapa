@@ -53,7 +53,8 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
 
         Spinner spinner = (Spinner) view.findViewById(R.id.sort_spinner);
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.sort_options, android.R.layout.simple_spinner_item);
+                R.array.sort_options, R.layout.spinner_layout);
+
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(this);

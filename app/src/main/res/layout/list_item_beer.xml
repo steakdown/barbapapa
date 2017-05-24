@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:background="#ffffff">
 
     <ImageView
         android:id="@+id/beer_photo"
@@ -69,6 +69,7 @@
             android:textSize="16sp"
             tools:text="Witbier"
             android:gravity="center"
+            android:textColor="@color/colorSecondaryText"
             />
 
         <TextView
@@ -83,6 +84,7 @@
             android:ellipsize="end"
             android:textSize="16sp"
             tools:text="6%"
+            android:textColor="@color/colorSecondaryText"
             />
 
     </RelativeLayout>

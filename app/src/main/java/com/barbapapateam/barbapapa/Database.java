@@ -22,7 +22,6 @@ public class Database {
     static void initDb(Context context)
     {
         imageIDs = new Hashtable<String, Integer>();
-
         imageIDs.put("Kwak", R.drawable.kwak);
         imageIDs.put("Delirium", R.drawable.delirium);
         imageIDs.put("Tripel Karmeliet", R.drawable.karmeliet);
@@ -69,9 +68,9 @@ public class Database {
         imageIDs.put("Vezelay Stout", R.drawable.vezelay);
         imageIDs.put("Kasteel Donker", R.drawable.kasteel_donker);
 
-        commands = new LinkedList<>();
-        beers = Utils.getBeersFromJSON("beers.json", context);
 
+        beers = Utils.getBeersFromJSON("beers.json", context);
+        commands = new LinkedList<>();
 
         initialized = true;
     }
@@ -84,8 +83,7 @@ public class Database {
 
     static int getImageIdFromName(String name)
     {
-        int id = imageIDs.get(name);
-        return id;
+        return imageIDs.get(name);
     }
 
     public static void setBeerForCommand(Beer beer)

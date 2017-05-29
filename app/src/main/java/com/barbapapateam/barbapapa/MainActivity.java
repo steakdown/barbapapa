@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+       // tabLayout = (TabLayout) findViewById(R.id.tabs);
+       // tabLayout.setupWithViewPager(viewPager);
 
         /*ImageButton drawerButton = (ImageButton) findViewById(R.id.drawerButton);
         drawerButton.setOnClickListener(new View.OnClickListener() {
@@ -82,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new ListFragment(), "Liste");
-        adapter.addFragment(new GuideFragment(), "Guide");
-        adapter.addFragment(new BasicRecomFragment(), "Recomm.");
+        //adapter.addFragment(new GuideFragment(), "Guide");
+        //adapter.addFragment(new BasicRecomFragment(), "Recomm.");
         viewPager.setAdapter(adapter);
     }
 

@@ -47,7 +47,8 @@
                         android:layout_weight="0.62"
                         android:gravity="center"
                         android:text="Babar Mobile"
-                        android:textSize="23sp" />
+                        android:textSize="23sp"
+                        android:textColor="@color/colorIcons"/>
 
                <!--     <ImageButton
                         android:id="@+id/imageButton"

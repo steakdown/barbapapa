@@ -18,7 +18,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="4dp" />
 
-    <TextView
+   <TextView
         android:id="@+id/beer_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="2dp"
         android:maxLines="1"
         android:paddingEnd="4dp"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="#0000"
         android:textSize="22sp"
         tools:text="2,80€"
         android:layout_alignParentRight="true"
@@ -42,9 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/beer_photo"
-        android:layout_toStartOf="@id/beer_price"
-        android:layout_toLeftOf="@id/beer_photo"
-        android:layout_toRightOf="@id/beer_price">
+        android:layout_toLeftOf="@id/beer_photo">
 
         <TextView
             android:id="@+id/beer_name"

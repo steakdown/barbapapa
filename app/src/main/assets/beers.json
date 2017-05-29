@@ -1,5 +1,5 @@
 {
-  "beers": [
+  "beers":  [
       {
           "name" : "Kwak",
           "type" : "Belge Triple",
@@ -7,7 +7,8 @@
           "ABV" : 8.4,
           "price" : 1.6,
           "bottle" : true,
-          "path" : "kwak.png"
+          "path" : "kwak.png",
+          "description" : ""
       },
       {
           "name" : "Delirium",
@@ -16,7 +17,8 @@
           "ABV" : 8.5,
           "price" : 2.4,
           "bottle" : true,
-          "path" : "delirium.png"
+          "path" : "delirium.png",
+          "description" : ""
       },
       {
           "name" : "Tripel Karmeliet",
@@ -25,16 +27,18 @@
           "ABV" : 8.4,
           "price" : 2.1,
           "bottle" : true,
-          "path" : "karmeliet.png"
+          "path" : "karmeliet.png",
+          "description" : ""
       },
       {
           "name" : "Leffe",
           "type" : "Belge",
           "color" : "Blonde",
-          "ABV" : 6.6,
+          "ABV" : 6.6000000000000005,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "leffe.png"
+          "path" : "leffe.png",
+          "description" : ""
       },
       {
           "name" : "Desperados",
@@ -43,16 +47,18 @@
           "ABV" : 5.9,
           "price" : 2.1,
           "bottle" : true,
-          "path" : "desperados.png"
+          "path" : "desperados.png",
+          "description" : ""
       },
       {
           "name" : "Kriek",
           "type" : "Lambic à la cerise",
           "color" : "Rouge",
-          "ABV" : 3.5,
+          "ABV" : 3.5000000000000004,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "kriek.png"
+          "path" : "kriek.png",
+          "description" : ""
       },
       {
           "name" : "Punk",
@@ -61,16 +67,18 @@
           "ABV" : 5.6,
           "price" : 2.7,
           "bottle" : true,
-          "path" : "punk.png"
+          "path" : "punk.png",
+          "description" : ""
       },
       {
           "name" : "Cuvée des Trolls",
           "type" : "Belge",
           "color" : "Blonde",
-          "ABV" : 7.0,
+          "ABV" : 7.000000000000001,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "trolls.png"
+          "path" : "trolls.png",
+          "description" : ""
       },
       {
           "name" : "1664 Blanc",
@@ -79,7 +87,8 @@
           "ABV" : 5,
           "price" : 1.9,
           "bottle" : true,
-          "path" : "seize.png"
+          "path" : "seize.png",
+          "description" : ""
       },
       {
           "name" : "Pêcheresse",
@@ -88,7 +97,8 @@
           "ABV" : 2.5,
           "price" : 1.6,
           "bottle" : true,
-          "path" : "pecheresse.png"
+          "path" : "pecheresse.png",
+          "description" : ""
       },
       {
           "name" : "Elephant",
@@ -97,7 +107,8 @@
           "ABV" : 7.5,
           "price" : 3,
           "bottle" : false,
-          "path" : "elephant.png"
+          "path" : "elephant.png",
+          "description" : ""
       },
       {
           "name" : "Kronenbourg",
@@ -106,7 +117,8 @@
           "ABV" : 4.2,
           "price" : 1.9,
           "bottle" : false,
-          "path" : "kronenbourg.png"
+          "path" : "kronenbourg.png",
+          "description" : ""
       },
       {
           "name" : "Grimbergen Blanche",
@@ -115,7 +127,8 @@
           "ABV" : 6,
           "price" : 2.8,
           "bottle" : false,
-          "path" : "blanche.png"
+          "path" : "blanche.png",
+          "description" : ""
       },
       {
           "name" : "Grimbergen Double Ambrée",
@@ -124,7 +137,8 @@
           "ABV" : 6.5,
           "price" : 2.9,
           "bottle" : false,
-          "path" : "grim_ambree.png"
+          "path" : "grim_ambree.png",
+          "description" : ""
       },
       {
           "name" : "Superbock",
@@ -133,7 +147,8 @@
           "ABV" : 6.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "superbock.png"
+          "path" : "superbock.png",
+          "description" : ""
       },
       {
           "name" : "San Miguel",
@@ -142,7 +157,8 @@
           "ABV" : 5.4,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "sanmiguel.png"
+          "path" : "sanmiguel.jpg",
+          "description" : ""
       },
       {
           "name" : "Asahi",
@@ -151,7 +167,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "asahi.png"
+          "path" : "asahi.png",
+          "description" : ""
       },
       {
           "name" : "Brahma",
@@ -160,16 +177,18 @@
           "ABV" : 4.8,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "brahma.png"
+          "path" : "brahma.png",
+          "description" : ""
       },
       {
           "name" : "Pilsen Urquell",
           "type" : "Lager",
           "color" : "Blonde",
-          "ABV" : 4.4,
+          "ABV" : 4.3999999999999995,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "pilsner_urquell.png"
+          "path" : "pilsner_urquell.png",
+          "description" : ""
       },
       {
           "name" : "Hoegaarden",
@@ -178,16 +197,18 @@
           "ABV" : 4.9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "hoegaarden.png"
+          "path" : "hoegaarden.png",
+          "description" : ""
       },
       {
           "name" : "Angelus",
           "type" : "Belge double",
           "color" : "Blonde",
-          "ABV" : 7,
+          "ABV" : 7.000000000000001,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "angelus.png"
+          "path" : "angelus.png",
+          "description" : ""
       },
       {
           "name" : "Duchesse Anne",
@@ -196,25 +217,28 @@
           "ABV" : 6,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "duchesse_anne.png"
+          "path" : "duchesse_anne.png",
+          "description" : ""
       },
       {
           "name" : "Goudale",
           "type" : "Bière de garde",
           "color" : "Blonde",
-          "ABV" : 7.2,
+          "ABV" : 7.199999999999999,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "goudale.png"
+          "path" : "goudale.png",
+          "description" : ""
       },
       {
           "name" : "Queue de charrue",
           "type" : "Belge",
           "color" : "Blonde",
-          "ABV" : 6.6,
+          "ABV" : 6.6000000000000005,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "queue_de_charrue.png"
+          "path" : "queue_de_charrue.png",
+          "description" : ""
       },
       {
           "name" : "Pietra",
@@ -223,7 +247,8 @@
           "ABV" : 6,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "pietra.png"
+          "path" : "pietra.png",
+          "description" : ""
       },
       {
           "name" : "Bush triple",
@@ -232,7 +257,8 @@
           "ABV" : 12,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "bush_triple_ambree.png"
+          "path" : "bush_triple_ambree.png",
+          "description" : ""
       },
       {
           "name" : "Orval",
@@ -241,25 +267,18 @@
           "ABV" : 6.2,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "orval.png"
-      },
-      {
-          "name" : "Brooklyn East IPA",
-          "type" : "IPA",
-          "color" : "Blonde",
-          "ABV" : 6.9,
-          "price" : 2.9,
-          "bottle" : true,
-          "path" : "brooklyn_east.png"
+          "path" : "orval.png",
+          "description" : ""
       },
       {
           "name" : "Big Job",
           "type" : "IPA",
           "color" : "Ambrée",
-          "ABV" : 7.2,
+          "ABV" : 7.199999999999999,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "big_job.png"
+          "path" : "big_job.png",
+          "description" : ""
       },
       {
           "name" : "Carolus",
@@ -268,7 +287,8 @@
           "ABV" : 9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "carolus.png"
+          "path" : "carolus.png",
+          "description" : ""
       },
       {
           "name" : "Duvel",
@@ -277,16 +297,18 @@
           "ABV" : 9.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "triple_hop_duvel.png"
+          "path" : "triple_hop_duvel.png",
+          "description" : ""
       },
       {
           "name" : "Fruit défendu",
           "type" : "Belge triple",
           "color" : "Ambrée",
-          "ABV" : 8.8,
+          "ABV" : 8.799999999999999,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "fruit_defendu.png"
+          "path" : "fruit_defendu.png",
+          "description" : ""
       },
       {
           "name" : "Gauloise brune",
@@ -295,7 +317,8 @@
           "ABV" : 8.1,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "gauloise_brune.png"
+          "path" : "gauloise_brune.png",
+          "description" : ""
       },
       {
           "name" : "Mort subite",
@@ -304,7 +327,8 @@
           "ABV" : 4,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "mort_subite.png"
+          "path" : "mort_subite.png",
+          "description" : ""
       },
       {
           "name" : "Queue de charrue rouge",
@@ -313,16 +337,8 @@
           "ABV" : 8.7,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "queue_rouge.png"
-      },
-      {
-          "name" : "Kasteel rouge",
-          "type" : "Belge triple",
-          "color" : "Rouge",
-          "ABV" : 8,
-          "price" : 2.9,
-          "bottle" : true,
-          "path" : "kasteel_rouge.png"
+          "path" : "queue_rouge.png",
+          "description" : ""
       },
       {
           "name" : "BrewDog 5AM saint",
@@ -331,7 +347,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "5am_saint.png"
+          "path" : "fiveam_saint.png",
+          "description" : ""
       },
       {
           "name" : "Faro",
@@ -340,7 +357,8 @@
           "ABV" : 4.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "faro.png"
+          "path" : "faro.png",
+          "description" : ""
       },
       {
           "name" : "Gueuze",
@@ -349,7 +367,8 @@
           "ABV" : 4.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "gueuze.png"
+          "path" : "gueuze.png",
+          "description" : ""
       },
       {
           "name" : "BrewDog Jet Black Heart",
@@ -358,34 +377,18 @@
           "ABV" : 4.7,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "jet_black_heart.png"
-      },
-      {
-          "name" : "Guinness",
-          "type" : "Stout",
-          "color" : "Noire",
-          "ABV" : 5,
-          "price" : 2.9,
-          "bottle" : true,
-          "path" : "guinness.png"
-      },
-      {
-          "name" : "Erdinger",
-          "type" : "Weissbier",
-          "color" : "Blanche",
-          "ABV" : 5.3,
-          "price" : 2.9,
-          "bottle" : true,
-          "path" : "erdinger.png"
+          "path" : "jet_black_heart.png",
+          "description" : ""
       },
       {
           "name" : "Page 24",
           "type" : "Bière de garde",
           "color" : "Blonde",
-          "ABV" : 5.9,
+          "ABV" : 5.8999999999999995,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "page_24.png"
+          "path" : "page_24.png",
+          "description" : ""
       },
       {
           "name" : "Vezelay Stout",
@@ -394,7 +397,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "vezelay.png"
+          "path" : "vezelay.png",
+          "description" : ""
       },
       {
           "name" : "Kasteel Donker",
@@ -403,7 +407,28 @@
           "ABV" : 11,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "kasteel_donker.png"
+          "path" : "kasteel_donker.png",
+          "description" : ""
+      },
+      {
+          "name" : "Franziskaner",
+          "type" : "Hefeweizen",
+          "color" : "Blonde",
+          "ABV" : 5,
+          "price" : 2.9,
+          "bottle" : true,
+          "path" : "franziskaner.png",
+          "description" : ""
+      },
+      {
+          "name" : "La bête",
+          "type" : "Pilsner",
+          "color" : "Blonde",
+          "ABV" : 8,
+          "price" : 2.9,
+          "bottle" : true,
+          "path" : "la_bete.png",
+          "description" : ""
       }
   ]
 }

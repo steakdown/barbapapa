@@ -49,7 +49,6 @@ public class Database {
         imageIDs.put("Pietra", R.drawable.pietra);
         imageIDs.put("Bush triple", R.drawable.bush_triple_ambree);
         imageIDs.put("Orval", R.drawable.orval);
-        imageIDs.put("Brooklyn East IPA", R.drawable.brooklyn_east);
         imageIDs.put("Big Job", R.drawable.big_job);
         imageIDs.put("Carolus", R.drawable.carolus);
         imageIDs.put("Duvel", R.drawable.triple_hop_duvel);
@@ -57,16 +56,15 @@ public class Database {
         imageIDs.put("Gauloise brune", R.drawable.gauloise_brune);
         imageIDs.put("Mort subite", R.drawable.mort_subite);
         imageIDs.put("Queue de charrue rouge", R.drawable.queue_rouge);
-        imageIDs.put("Kasteel rouge", R.drawable.kasteel_rouge);
         imageIDs.put("BrewDog 5AM saint", R.drawable.fiveam_saint);
         imageIDs.put("Faro", R.drawable.faro);
         imageIDs.put("Gueuze", R.drawable.gueuze);
         imageIDs.put("BrewDog Jet Black Heart", R.drawable.jet_black_heart);
-        imageIDs.put("Guinness", R.drawable.guinness);
-        imageIDs.put("Erdinger", R.drawable.erdinger);
         imageIDs.put("Page 24", R.drawable.page_24);
         imageIDs.put("Vezelay Stout", R.drawable.vezelay);
         imageIDs.put("Kasteel Donker", R.drawable.kasteel_donker);
+        imageIDs.put("Franziskaner", R.drawable.franziskaner);
+        imageIDs.put("La bête", R.drawable.la_bete);
 
 
         beers = Utils.getBeersFromJSON("beers.json", context);

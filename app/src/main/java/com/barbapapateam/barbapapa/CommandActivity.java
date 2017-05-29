@@ -46,8 +46,8 @@ public class CommandActivity extends AppCompatActivity {
         TextView beerText = (TextView) findViewById(R.id.beerText);
         beerText.setText(beer.name);
 
-        RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        ratingBar.setRating(beer.getNote());
+        // RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        // ratingBar.setRating(beer.getNote());
 
         ImageView beerImage = (ImageView) findViewById(R.id.beerPhoto);
         beerImage.setImageResource(beer.imageID);
@@ -58,7 +58,7 @@ public class CommandActivity extends AppCompatActivity {
         type.setText(beer.type);
 
         TextView color = (TextView) findViewById(R.id.colorText);
-        color.setText(beer.color);
+        color.setText("Couleur : " + beer.color);
 
         TextView abv = (TextView) findViewById(R.id.ABVText);
         abv.setText(beer.getABV());
@@ -66,8 +66,8 @@ public class CommandActivity extends AppCompatActivity {
         TextView bottle = (TextView) findViewById(R.id.bottleText);
         bottle.setText(beer.getBottleDesc());
 
-        TextView price = (TextView) findViewById(R.id.priceText);
-        price.setText(beer.getPrice());
+        // TextView price = (TextView) findViewById(R.id.priceText);
+        // price.setText(beer.getPrice());
 
         ImageButton cancel = (ImageButton) findViewById(R.id.cancelButton);
         cancel.setOnClickListener(new View.OnClickListener(){

@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        ImageButton drawerButton = (ImageButton) findViewById(R.id.drawerButton);
+        /*ImageButton drawerButton = (ImageButton) findViewById(R.id.drawerButton);
         drawerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 menuDrawerLayout.openDrawer(GravityCompat.START);
             }
-        });
+        });*/
 
     }
 

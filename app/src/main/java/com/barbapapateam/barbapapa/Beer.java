@@ -17,9 +17,10 @@ public class Beer implements Serializable
     public String color;
     public float ABV;
     public boolean bottle;
+    public boolean checked;
 
 
-    public Beer(String name, float price, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle) {
+    public Beer(String name, float price, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle, boolean checked) {
         this.name = name;
         this.price = price;
         //this.imagePath = imagePath;
@@ -31,6 +32,7 @@ public class Beer implements Serializable
         this.bottle = bottle;
         this.noteSum = 3;
         this.noteCount = 1;
+        this.checked = checked;
     }
 
     public float getNote()

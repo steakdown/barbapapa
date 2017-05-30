@@ -1,5 +1,6 @@
 {
-  "beers":  [
+  "beers":
+  [
     {
       "name" : "Kwak",
       "type" : "Belge Triple",
@@ -8,7 +9,7 @@
       "price" : 1.6,
       "bottle" : true,
       "path" : "kwak.png",
-      "description" : "",
+      "description" : "La Kwak est une bière belge à la robe ambrée / cuivrée surmontée d'un grand col de mousse blanche. Sa saveur est douce avec des notes fruitées de prune et de noix associées à des pointes de malts caramel. Cela en fait une bière très douce et lisse, sans pour autant être trop sucrée. Cet ensemble rond est complété par une belle montée d'amertume tout au long de la dégustation, qui vient équilibrer le tout.",
       "checked" : false
     },
     {
@@ -19,7 +20,7 @@
       "price" : 2.4,
       "bottle" : true,
       "path" : "delirium.png",
-      "description" : "",
+      "description" : "Le corps dégage des arômes fruités et épicés qui sont rehaussés par une pointe d'alcool. L'entrée en bouche est épicée avec des saveurs évoquant presque les bières de blé, avant que les goûts herbacés du houblon et fruités du malt n'affirment leur présence. L'alcool est perceptible tout au long de la dégustation mais réaffirme sa présence en fin de bouche avec une légère acidité vineuse. Une belle amertume accompagne cette fin de bouche sèche.",
       "checked" : false
     },
     {
@@ -30,7 +31,7 @@
       "price" : 2.1,
       "bottle" : true,
       "path" : "karmeliet.png",
-      "description" : "",
+      "description" : "La bière Tripel Karmeliet est l'un des grands classiques des bières belges. Selon la brasserie, la recette utilisée serait la même depuis 1679. A la dégustation, cette bière belge présente une robe blonde dorée et une mousse crémeuse. Le nez s'avère à la fois raffiné et complexe. On retrouve ainsi les notes de vanille et de banane propres à la levure utilisée mêlées aux arômes agrumes du houblon Styrians. En bouche, ce sont les différentes céréales qui s'expriment en premier, associées ensuite aux touches houblonnées du Styrian.",
       "checked" : false
     },
     {
@@ -41,7 +42,7 @@
       "price" : 1.8,
       "bottle" : true,
       "path" : "leffe.png",
-      "description" : "",
+      "description" : "Brassée par l’abbaye Leffe depuis 1240, la Leffe a su convaincre et s'imposer comme une référence au fil des siècles et se vend aujourd'hui jusqu'en Chine. Elle développe une belle effervescence, modérée mais durable. Du verre s'échappe des arômes maltés puissants de céréales et de maïs ainsi que des senteurs de banane et de clou de girofle. En bouche, elle présente une rondeur maltée de caramel accompagnée de saveurs fruitées, et d'une pointe épicée associable à la levure.",
       "checked" : false
     },
     {
@@ -52,18 +53,18 @@
       "price" : 2.1,
       "bottle" : true,
       "path" : "desperados.png",
-      "description" : "",
+      "description" : "La bière Desperados est une blonde légère, aromatisée à la tequila. Cette bière est un produit spécial qui est à la limite entre cocktail alcoolisé et bière légère. Elle se compose de bière, de sucre, d'arômes (75% de Tequila) et contient du malt d'orge. La \"Despé' est donc un produit qui ravira les palais peu amateurs de bières trop caractérielles, et qui fait généralement fureur au près des jeunes et des femmes quand les chaleurs de l'été se font trop ressentir !",
       "checked" : false
     },
     {
       "name" : "Kriek",
       "type" : "Lambic à la cerise",
       "color" : "Rouge",
-      "ABV" : 3.5,
+      "ABV" : 3.5000000000000004,
       "price" : 1.8,
       "bottle" : true,
       "path" : "kriek.png",
-      "description" : "",
+      "description" : "La Lindemans Kriek est une bière fruitée. Cela donne une bière rouge clair avec une énorme tête de mousse rose. Le tout est traversé par une effervescence considérable. L'arôme qu'elle laisse s'échapper est très doux et totalement dominé par les odeurs de cerises. En bouche, la saveur est également dominée par les cerises, mais sur un fond boisé et des notes acides. Cette bière est particulièrement appréciée des femmes grâce à sa légèreté et son arôme très fruité.",
       "checked" : false
     },
     {
@@ -74,29 +75,29 @@
       "price" : 2.7,
       "bottle" : true,
       "path" : "punk.png",
-      "description" : "",
+      "description" : "La Punk IPA est une bière écossaise s'inspirant des tendances américaines en matière de brassage et du choix des houblons. On retrouve ici une bière très houblonnée telle qu'elles se font actuellement dans les petites brasseries d'Amérique du Nord. Elle réveille sur la langue des saveurs fruitées évoquant la pêche et les fruits tropicaux, suivit d'une amertume relativement puissante et sèche qui perdure longuement en bouche. Celle-ci cède ensuite sa place à un bel arrière goût fruité. Pour les initiés à la recherche de sensations nouvelles et de caractère !",
       "checked" : false
     },
     {
       "name" : "Cuvée des Trolls",
       "type" : "Belge",
       "color" : "Blonde",
-      "ABV" : 7,
+      "ABV" : 7.000000000000001,
       "price" : 1.8,
       "bottle" : true,
       "path" : "trolls.png",
-      "description" : "",
+      "description" : "La Cuvée des Trolls est une bière belge brassée depuis l'an 2000 par la Brasserie Dubuisson qui produit aussi les caractérielles bières Bush. La Cuvée des Trolls est aromatisée avec des écorces d’oranges séchées. Elles donnent à cette bière des notes de fraîcheur et des arômes particulièrement agréables et fruités. Au palais, la Cuvée des Trolls présente une rondeur constituée à la fois de goûts et de saveurs assez relevés, mais particulièrement bien équilibrés. L’amertume, l’acidité et le sucré s’équilibrent parfaitement et donne ainsi une bière goûteuse et sans aspérités désagréables.",
       "checked" : false
     },
     {
       "name" : "1664 Blanc",
-      "type" : "Witbier",
+      "type" : "Lager",
       "color" : "Blanche",
       "ABV" : 5,
       "price" : 1.9,
       "bottle" : true,
       "path" : "seize.png",
-      "description" : "",
+      "description" : "Lancée en 2006, 1664 Blanc est LA bière blanche moderne grâce à son design rupturiste et impactant! Des yeux à la bouche, 1664 Blanc convainc par sa bouteille bleue et son goût unique. De par sa saveur et son design, elle incarne le goût à la française dans l’univers des bières blanches. Authentique, elle est accessible et légèrement fruitée, révélant des arômes subtils d’agrumes, de citron et de coriandre.",
       "checked" : false
     },
     {
@@ -107,7 +108,7 @@
       "price" : 1.6,
       "bottle" : true,
       "path" : "pecheresse.png",
-      "description" : "",
+      "description" : "Cette Lindemans est une bière de type lambic, brassée à base de malts d'orge, de blé et avec ajout de jus de pêche avant une période de maturation en fût de chêne. On retrouve en bouche des saveurs de pêche marquées qui s'accompagnent d'une très légère saveur acidulée, signe d'une fermentation lambic, offrant ainsi un équilibre entre vivacité et douceur. Très appréciées par ces dames, cette bière belge se déguste fraîche et de préférence dans une flûte.",
       "checked" : false
     },
     {
@@ -118,7 +119,7 @@
       "price" : 3,
       "bottle" : false,
       "path" : "elephant.png",
-      "description" : "",
+      "description" : "Créée au cours du 19ème siècle, cette bière fut la première produite par la Brasserie Carlsberg . La Carlsberg Pils est aujourd'hui disponible dans plus de 60 pays à travers le monde. La Carlsberg Pils est une bière à la robe jaune paille qui se couvre d'un fin chapeau de mousse. Elle offre au nez des arômes de malt évoquant les céréales et la paille et de légères senteurs herbacées. En bouche, on retrouve des saveurs maltées qui sont suivies de notes herbacées et d'une fine amertume.",
       "checked" : false
     },
     {
@@ -129,18 +130,18 @@
       "price" : 1.9,
       "bottle" : false,
       "path" : "kronenbourg.png",
-      "description" : "",
+      "description" : "Aujourd’hui Kronenbourg est la bière leader en fûts en consommation hors domicile et en volume en grande distribution. La bière Kronenbourg doit son succès à la fraîcheur de son goût, à la finesse de son amertume, à son équilibre parfait, et à la subtilité de ses notes fruitées. C'est aussi une bière à la texture moelleuse, à la mousse dense avec de fines et très légères bulles. Elle est meilleure chaude et en cul-sec.",
       "checked" : false
     },
     {
       "name" : "Grimbergen Blanche",
-      "type" : "Witbier",
+      "type" : "Bière belge",
       "color" : "Blanche",
       "ABV" : 6,
       "price" : 2.8,
       "bottle" : false,
       "path" : "blanche.png",
-      "description" : "",
+      "description" : "Avec cette blanche, le brasseur belge Grimbergen nous montre qu'il maîtrise également les styles plus légers et plus agréables pour l'été. La bouche, typiquement acidulée en attaque nous dévoile au fur et à mesure de la dégustation des saveurs de fruits jaunes avant un final épicé, très légèrement amer. Fraiche et pétillante, cette Grimbergen Blanche s'avère parfaite pour l'été, avant la dégustation de l'autre classique de la brasserie, la Grimbergen Blonde.",
       "checked" : false
     },
     {
@@ -151,7 +152,7 @@
       "price" : 2.9,
       "bottle" : false,
       "path" : "grim_ambree.png",
-      "description" : "",
+      "description" : "La Grimbergen double est une bière belge dites \"d'Abbaye\". En bouche, les saveurs de caramels apporte à l'ensemble une rondeur maltée qui accompagne des notes fruitées de raisins, de grains torréfiés et d'épices. L'amertume est presque imperceptible et l'ensemble est doux et relativement bien équilibré. \"Brûle mais ne se consume pas\" telle est la devise de l'Abbaye de Grimbergen fondée en 1128 dans un petit village du nord de Bruxelles. Elle fut à maintes reprises incendiée mais à chaque fois rebâtie, tel un phénix renaissant de ses cendres.",
       "checked" : false
     },
     {
@@ -162,7 +163,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "superbock.png",
-      "description" : "",
+      "description" : "C'est une bière portugaise légèrement sucrée et fruitée (groseille), elle se laisserait facilement passer pour un cocktail. En bouche, on y retrouve des saveurs douces de malt et de houblon avec une légère note de caramel. C'est une bière huileuse qui se veut très rafraîchissante.",
       "checked" : false
     },
     {
@@ -172,8 +173,8 @@
       "ABV" : 5.4,
       "price" : 2.9,
       "bottle" : true,
-      "path" : "sanmiguel.png",
-      "description" : "",
+      "path" : "sanmiguel.jpg",
+      "description" : "Venue d'Espagne, c'est une lager à la robe dorée surmontée d'une mousse blanche. Douce et délicate en bouche, elle nous propose des saveurs de malt, de houblon, de levure, de caramel et de céréales. Rafraîchissante, elle sera l'alliée idéale pour la dure fin de soirée.",
       "checked" : false
     },
     {
@@ -184,7 +185,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "asahi.png",
-      "description" : "",
+      "description" : "Bière numéro un au Japon, Asahi Super Dry est issue d'une sélection des meilleurs ingrédients. Vous apprécierez son absolue légèreté et le côté très rafraîchissant de cette pils au malt d'orge.",
       "checked" : false
     },
     {
@@ -195,7 +196,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "brahma.png",
-      "description" : "",
+      "description" : "La Brahma est originaire de Rio de Janeiro au Brésil, elle est conditionnée dans une bouteille galbée, aux lignes et aux courbes originales et esthétiques. Cette pils blonde sera vous ravir avec son goût léger et désaltérant avec un soupçon de papaye en note finale !",
       "checked" : false
     },
     {
@@ -206,7 +207,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "pilsner_urquell.png",
-      "description" : "",
+      "description" : "Maitre étalon dans le domaine de la lager, la Pilsner Urquell est une bière tchèque à la robe blonde dorée qui est accompagnée d'une mousse blanche persistante. La bouche, fine et légère, met parfaitement en avant des touches céréales et houblonnées avant de s'achever dans une très belle amertume. Classique parmi les classiques, cette bière tchèque fait certainement partie des 10 bières qu'il faut avoir bu dans sa vie. LA Pilsener !",
       "checked" : false
     },
     {
@@ -217,40 +218,40 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "hoegaarden.png",
-      "description" : "",
+      "description" : "La Hoegaarden est une bière belge blanche qui compte parmi les plus connues hors du royaume de Belgique. Elle est brassée avec de la coriandre et des zestes de citron pour plus de recherche de goût et de fraîcheur. En bouche, on retrouve des saveurs très similaires aux arômes perçus avec un goût fruité et une douce présence de la coriandre. Une belle amertume se développe sur la fin de bouche et affirme le caractère consensuel de cette bière blanche qui est un bel exemple du style des bières blanches belges.",
       "checked" : false
     },
     {
       "name" : "Angelus",
       "type" : "Belge double",
       "color" : "Blonde",
-      "ABV" : 7,
+      "ABV" : 7.0,
       "price" : 2.9,
       "bottle" : true,
       "path" : "angelus.png",
-      "description" : "",
+      "description" : "C'est une belle blonde à la robe troublée qui est brassée sur une base de froment (blé), elle a un nez très fruité qui offre aux narines de légers parfums de miel et de pêche. L'Angelus présente en bouche une relative acidité qui s'accompagne de saveurs plus rondes de fruits à chair blanche, d'agrumes et de miel.",
       "checked" : false
     },
     {
       "name" : "Duchesse Anne",
-      "type" : "Belge double",
+      "type" : "Bière triple",
       "color" : "Blonde",
       "ABV" : 6,
       "price" : 2.9,
       "bottle" : true,
       "path" : "duchesse_anne.png",
-      "description" : "",
+      "description" : "Cette blonde à la mousse abondante est un hommage à Anne de Bretagne, deux fois reine de France. Le bouquet est partagé entre épices et malts, tandis que des notes houblonnées apparaissent progressivement. L’attaque est bouche est légèrement fruitée et maltée et nous amène à une très fine amertume.",
       "checked" : false
     },
     {
       "name" : "Goudale",
-      "type" : "Bière de garde",
+      "type" : "Bière des flandres",
       "color" : "Blonde",
       "ABV" : 7.2,
       "price" : 2.9,
       "bottle" : true,
       "path" : "goudale.png",
-      "description" : "",
+      "description" : "La Goudale est produite avec des malts spéciaux et aromatisée avec des houblons des Flandres finement sélectionnés. La Goudale offre en bouche une bière douce et fruitée ou la rondeur des malts enrobe les notes épicées de la levure et l'amertume franche des houblons des Flandres. Cette bière dorée de caractère a de nombreuses saveurs à offrir.",
       "checked" : false
     },
     {
@@ -261,7 +262,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "queue_de_charrue.png",
-      "description" : "",
+      "description" : "La Queue de Charrue Blonde est une bière de fermentation haute à la robe dorée et à la belle mousse blanche. Au nez, elle dégage des arômes de houblon, de fleurs et de malt pour des saveurs douces et généreuses subtilement fruitées et maltées.",
       "checked" : false
     },
     {
@@ -272,7 +273,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "pietra.png",
-      "description" : "",
+      "description" : "Bière au caractère digne d'un corse, la Pietra est brassée sur place et avec un ingrédient typique de l'île, la Farine de Châtaigne ! C'est une bière à la robe ambrée qui se couvre d'une fine couche de mousse et offre au nez des arômes maltés accompagnés de senteurs boisées ainsi que de notes discrètes de châtaigne. Elle délivre un fort arôme de houblon qui se retrouve dans le palais. Dans le même temps, en bouche, une amertume et une sensation sèche et résineuse se font apprécier.",
       "checked" : false
     },
     {
@@ -283,7 +284,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "bush_triple_ambree.png",
-      "description" : "",
+      "description" : "Issue de la plus vieille brasserie de Wallonie encore en activité, cette Bush Blonde fait partie des bières les plus fortes de Belgique, même si l'alcool y est étonnamment discret. En bouche, on trouve des saveurs maltées et très fruitées, l'amertume finale est très légère.",
       "checked" : false
     },
     {
@@ -294,18 +295,18 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "orval.png",
-      "description" : "",
+      "description" : "L'Orval est une bière trappiste de dégustation, à la belle couleur orangée. C'est une bière à l'arôme houblonné intense qui dévoile une légère acidité astringente et gagne à mûrir en cave pendant quelques années, debout et à l'abri de la lumière. Ce caractère complexe de l'Orval vient en partie de trois fermentations séparées et du houblon local utilisé pour la produire. La bouche, qui présente une magnifique pétillance est elle aussi portée sur la brett, à savoir la levure sauvage. Le final est amer, sur une belle longueur.",
       "checked" : false
     },
     {
       "name" : "Big Job",
-      "type" : "IPA",
+      "type" : "Double IPA",
       "color" : "Ambrée",
       "ABV" : 7.2,
       "price" : 2.9,
       "bottle" : true,
       "path" : "big_job.png",
-      "description" : "",
+      "description" : "La Big Job saura satisfaire les amateurs d'amertume. Elle a des saveurs de fruits tropicaux, de pamplemousse, de pêche, de malt et de caramel dans un ensemble très amer et avec un final sec et houblonné.",
       "checked" : false
     },
     {
@@ -316,18 +317,18 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "carolus.png",
-      "description" : "",
+      "description" : "Cette bière mûrie en bouteille, est exclusivement obtenue à partir de malt pâle. Elle présente une robe blonde aux reflets dorés surmontée d’une fine mousse blanche. Le palais intense et puissant, est porté par des notes tropicales avec des touches subtiles de banane, de figue et de kiwi. On se laisse également séduire par une agréable longueur en bouche aux pointes de réglisse, de coriandre et de clou de girofle.",
       "checked" : false
     },
     {
       "name" : "Duvel",
       "type" : "Belge triple",
       "color" : "Blonde",
-      "ABV" : 9.5,
+      "ABV" : 8.5,
       "price" : 2.9,
       "bottle" : true,
       "path" : "triple_hop_duvel.png",
-      "description" : "",
+      "description" : "La bière Duvel est une bière belge fruitée dont la réputation n'est plus à faire ! On trouve un grand équilibre en bouche, avec des saveurs fruitées de houblon et de levure qui sont soutenus par une légère rondeur maltée. Les touches épicées de la levure relèvent l'ensemble, accompagnées d'une amertume franche et prononcée. L'ensemble apparait extrêmement fruité quoique faiblement sucré et l'harmonie des saveurs en fait oublier la présence de l'alcool dans cette bière qui titre tout de même à 8.5° !",
       "checked" : false
     },
     {
@@ -338,7 +339,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "fruit_defendu.png",
-      "description" : "",
+      "description" : "La Fruit Défendu est une bière qui présente la particularité d'être aromatisée avec de la coriandre et du curaçao en plus du houblon aromatique déjà utilisé. En bouche, on retrouve des saveurs très douces et qui masquent l'alcool. Avec un ton presque mielleux, la Fruit Défendu développe sur le palais des saveurs maltées et épicées avec des notes de fruits et de levure.",
       "checked" : false
     },
     {
@@ -349,7 +350,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "gauloise_brune.png",
-      "description" : "",
+      "description" : "La Gauloise Brune est une bière brune aux saveurs fruitées et épicées avec des notes de levure, d'alcool, de caramel et de raisin pour un final sec et subtilement amer.",
       "checked" : false
     },
     {
@@ -360,7 +361,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "mort_subite.png",
-      "description" : "",
+      "description" : "La Mort subite est vieillie avec soin en fût de chêne. Avec son goût acidulé, et quelques notes de pommes vertes et de fruits, cette bière saura attirer les adeptes de finesse et de légèreté.",
       "checked" : false
     },
     {
@@ -371,18 +372,18 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "queue_rouge.png",
-      "description" : "",
+      "description" : "La Queue de Charrue Rouge est aromatisée au jus de cerise. En bouche, on y retrouve des saveurs de fruits rouges, de caramel, d'amandes, de cerise et de bois. Son corps est moyen, sa carbonatation modérée et sa texture huileuse pour un final doux et fruité.",
       "checked" : false
     },
     {
       "name" : "BrewDog 5AM saint",
-      "type" : "Lager au litchi",
+      "type" : "Red Ale",
       "color" : "Ambrée",
       "ABV" : 5,
       "price" : 2.9,
       "bottle" : true,
       "path" : "fiveam_saint.png",
-      "description" : "",
+      "description" : "La 5 A.M Saint a un arôme très fruité évoquant le litchi ainsi que des notes florales très présentes. En bouche, de fortes saveurs fruitées accompagnent une légère acidité. Les houblons sont encore une fois très présents et développent une amertume puissante évoquant le pamplemousse. L'impression d'agrumes perdure longuement en bouche.",
       "checked" : false
     },
     {
@@ -393,7 +394,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "faro.png",
-      "description" : "",
+      "description" : "La Lindemans Faro est une bière de blé (froment) de fermentation spontanée et au goût aigre-doux parfaitement équilibré par l'ajout d'une dose supplémentaire de sucre candi. Elle présente une robe de couleur rouge-orangée qui se surmonte d'une fine couche de mousse blanche. On retrouve en bouche une pointe d'acidité qui s'accompagne de saveurs douces et sucrées de fruits, ainsi que de légères touches boisées",
       "checked" : false
     },
     {
@@ -404,7 +405,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "gueuze.png",
-      "description" : "",
+      "description" : "La Lindemans Gueuze est une bière fruitée. Du mélange savant de jeune et vieux Lambic résulte une Gueuze exquise et dorée au goût caractéristique. Elle dégage des arômes de fruits, d'orange et de baies avec des notes boisées et douces. En bouche, on y retrouve des saveurs douces, boisées et sucrées avec des notes de fruits.",
       "checked" : false
     },
     {
@@ -415,18 +416,18 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "jet_black_heart.png",
-      "description" : "",
+      "description" : "La Jet Black Heart possède une robe noire profonde avec une fine mousse beige pour des arômes de malt torréfié, de café et de chocolat avec un corps puissant. Avec son corps de velours, de malt d'avoine et de blé, elle apporte des saveurs prononcées de vanille, de fruits noirs, de chocolat, de café et de caramel. Une texture onctueuse et une carbonatation faible en font un stout à la finition sèche et chocolatée.",
       "checked" : false
     },
     {
       "name" : "Page 24",
-      "type" : "Bière de garde",
+      "type" : "Bière des Flandres",
       "color" : "Blonde",
       "ABV" : 5.9,
       "price" : 2.9,
       "bottle" : true,
       "path" : "page_24.png",
-      "description" : "",
+      "description" : "Bière 100% pur malt d'orge qui titre 5.9° offre un corps malté, aux arômes de céréales et de miel. Son amertume est moyenne et florale, elle est trés désaltérante.",
       "checked" : false
     },
     {
@@ -437,7 +438,7 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "vezelay.png",
-      "description" : "",
+      "description" : "Cette bière brune est à la fois puissante et raffinée grâce à sa robe brune, sa belle mousse crémeuse, son nez aux senteurs cacao et aux saveurs de café. C'est une bière biologique pur malt de fermentation haute, non filtrée et non pasteurisée.",
       "checked" : false
     },
     {
@@ -448,19 +449,19 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "kasteel_donker.png",
-      "description" : "",
+      "description" : "En bouche, on y retrouve des saveurs équilibrées entre l'amertume et la douceur avec des notes de café, de chocolat, de caramel et de malt grillé.",
       "checked" : false
     },
     {
       "name" : "Franziskaner",
-      "type" : "Hefeweizen",
+      "type" : "Weissbier",
       "color" : "Blonde",
       "ABV" : 5,
       "price" : 2.9,
       "bottle" : true,
       "path" : "franziskaner.png",
-      "description" : "",
-      "checked": false
+      "description" : "Comme la Erdinger et autres Weissbier, la Franziskaner est une bière brassée avec un malt composé à au moins 50% de blé. En bouche,la structure gustative est très proche de la structure olfactive avec des saveurs franches de fruits et une nette dominance de la banane. L'impression épicée ressort alors très clairement avec des notes poivrées suivies d'un goût de clou de girofle et de touches vanillées. En conclusion, la Franziskaner est une bière d'exception, extrêmement rafraichissante et qui fait figure de référence dans le style des bières de blé.",
+      "checked" : false
     },
     {
       "name" : "La bête",
@@ -470,8 +471,8 @@
       "price" : 2.9,
       "bottle" : true,
       "path" : "la_bete.png",
-      "description" : "",
-      "checked" : true
+      "description" : "La Bête possède une couleur ambrée et une fine mousse blanche. Étonnamment désaltérante malgré ses 8 degrés, elle allie puissance et finesse. Son caractère malté s’accompagne de notes de caramel et de pain d’épices.",
+      "checked" : false
     }
   ]
 }

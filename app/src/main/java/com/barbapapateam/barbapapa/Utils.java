@@ -4,15 +4,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.MediaStore;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.LinkedList;
 
@@ -68,4 +74,16 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    static void saveBeersToJSON(LinkedList<Beer> beers) {
+        Gson gson = new Gson();
+        try {
+            Writer osWriter = new OutputStreamWriter( new FileOutputStream("beers.json"));
+            gson.toJson(beers, osWriter);
+            osWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

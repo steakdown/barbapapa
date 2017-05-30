@@ -45,6 +45,7 @@ public class ListFragment extends Fragment implements AdapterView.OnItemSelected
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
+                LinkedList<Beer> beers = Database.beers;
                 Beer beer = (Beer) parent.getItemAtPosition(position);
                 Database.setBeerForCommand(beer);
                 LaunchCommandActivity();

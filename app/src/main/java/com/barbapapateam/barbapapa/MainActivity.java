@@ -22,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static com.barbapapateam.barbapapa.Database.*;
@@ -78,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+  /*  @Override
+    protected void onStop() {
+        super.onStop();
+        LinkedList<Beer> beers = Database.beers;
+        Utils.saveBeersToJSON(beers);
+    }
+*/
     private void setupViewPager(ViewPager viewPager)
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

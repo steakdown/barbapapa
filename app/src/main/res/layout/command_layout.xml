@@ -235,17 +235,6 @@
                         android:textColor="#FFFF"
                         android:textSize="30sp"
                         android:textStyle="bold" />
-                    <Button
-                        android:id="@+id/retourButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_weight="0.5"
-                        android:layout_gravity="bottom"
-                        android:backgroundTint="#f44242"
-                        android:text="retour"
-                        android:textColor="#FFFF"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -114,14 +114,11 @@ public class CommandActivity extends AppCompatActivity {
         });
 
 		final Button commanderButton = (Button) findViewById(R.id.commanderButton);
-        final Button retourButton = (Button) findViewById(R.id.retourButton);
 
         if(beer.checked){
-            commanderButton.setText("Checked");
-            retourButton.setText("Annuler");
+            commanderButton.setText("Annuler");
         } else {
             commanderButton.setText("Check-in");
-            retourButton.setText("Retour");
         }
 		commanderButton.setOnClickListener(new View.OnClickListener(){
 
@@ -133,21 +130,12 @@ public class CommandActivity extends AppCompatActivity {
                 if(!beer.checked) {
                     beer.checked = true;
                     Utils.goToActivity(CommandActivity.this, MainActivity.class);
+                } else {
+                    beer.checked = false;
+                    Utils.goToActivity(CommandActivity.this, MainActivity.class);
                 }
 			}
 		});
-
-        retourButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view)
-            {
-                if(beer.checked) {
-                    beer.checked = false;
-                }
-                Utils.goToActivity(CommandActivity.this, MainActivity.class);
-            }
-        });
     }
 
     public void returnToMainActivity()

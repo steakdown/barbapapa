@@ -7,7 +7,8 @@
           "ABV" : 8.4,
           "price" : 1.6,
           "bottle" : true,
-          "path" : "kwak.png"
+          "path" : "kwak.png",
+          "checked" : false          
       },
       {
           "name" : "Delirium",
@@ -16,7 +17,8 @@
           "ABV" : 8.5,
           "price" : 2.4,
           "bottle" : true,
-          "path" : "delirium.png"
+          "path" : "delirium.png",
+          "checked" : false          
       },
       {
           "name" : "Tripel Karmeliet",
@@ -25,7 +27,8 @@
           "ABV" : 8.4,
           "price" : 2.1,
           "bottle" : true,
-          "path" : "karmeliet.png"
+          "path" : "karmeliet.png",
+          "checked" : false          
       },
       {
           "name" : "Leffe",
@@ -34,7 +37,8 @@
           "ABV" : 6.6,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "leffe.png"
+          "path" : "leffe.png",
+          "checked" : false          
       },
       {
           "name" : "Desperados",
@@ -43,7 +47,8 @@
           "ABV" : 5.9,
           "price" : 2.1,
           "bottle" : true,
-          "path" : "desperados.png"
+          "path" : "desperados.png",
+          "checked" : false          
       },
       {
           "name" : "Kriek",
@@ -52,7 +57,8 @@
           "ABV" : 3.5,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "kriek.png"
+          "path" : "kriek.png",
+          "checked" : false          
       },
       {
           "name" : "Punk",
@@ -61,7 +67,8 @@
           "ABV" : 5.6,
           "price" : 2.7,
           "bottle" : true,
-          "path" : "punk.png"
+          "path" : "punk.png",
+          "checked" : false          
       },
       {
           "name" : "Cuvée des Trolls",
@@ -70,7 +77,8 @@
           "ABV" : 7.0,
           "price" : 1.8,
           "bottle" : true,
-          "path" : "trolls.png"
+          "path" : "trolls.png",
+          "checked" : false          
       },
       {
           "name" : "1664 Blanc",
@@ -79,7 +87,8 @@
           "ABV" : 5,
           "price" : 1.9,
           "bottle" : true,
-          "path" : "seize.png"
+          "path" : "seize.png",
+          "checked" : false          
       },
       {
           "name" : "Pêcheresse",
@@ -88,7 +97,8 @@
           "ABV" : 2.5,
           "price" : 1.6,
           "bottle" : true,
-          "path" : "pecheresse.png"
+          "path" : "pecheresse.png",
+          "checked" : false          
       },
       {
           "name" : "Elephant",
@@ -97,7 +107,8 @@
           "ABV" : 7.5,
           "price" : 3,
           "bottle" : false,
-          "path" : "elephant.png"
+          "path" : "elephant.png",
+          "checked" : false          
       },
       {
           "name" : "Kronenbourg",
@@ -106,7 +117,8 @@
           "ABV" : 4.2,
           "price" : 1.9,
           "bottle" : false,
-          "path" : "kronenbourg.png"
+          "path" : "kronenbourg.png",
+          "checked" : false          
       },
       {
           "name" : "Grimbergen Blanche",
@@ -115,7 +127,8 @@
           "ABV" : 6,
           "price" : 2.8,
           "bottle" : false,
-          "path" : "blanche.png"
+          "path" : "blanche.png",
+          "checked" : false          
       },
       {
           "name" : "Grimbergen Double Ambrée",
@@ -124,7 +137,8 @@
           "ABV" : 6.5,
           "price" : 2.9,
           "bottle" : false,
-          "path" : "grim_ambree.png"
+          "path" : "grim_ambree.png",
+          "checked" : false          
       },
       {
           "name" : "Superbock",
@@ -133,7 +147,8 @@
           "ABV" : 6.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "superbock.png"
+          "path" : "superbock.png",
+          "checked" : false          
       },
       {
           "name" : "San Miguel",
@@ -142,7 +157,8 @@
           "ABV" : 5.4,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "sanmiguel.png"
+          "path" : "sanmiguel.png",
+          "checked" : false          
       },
       {
           "name" : "Asahi",
@@ -151,7 +167,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "asahi.png"
+          "path" : "asahi.png",
+          "checked" : false          
       },
       {
           "name" : "Brahma",
@@ -160,7 +177,8 @@
           "ABV" : 4.8,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "brahma.png"
+          "path" : "brahma.png",
+          "checked" : false          
       },
       {
           "name" : "Pilsen Urquell",
@@ -169,7 +187,8 @@
           "ABV" : 4.4,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "pilsner_urquell.png"
+          "path" : "pilsner_urquell.png",
+          "checked" : false          
       },
       {
           "name" : "Hoegaarden",
@@ -178,7 +197,8 @@
           "ABV" : 4.9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "hoegaarden.png"
+          "path" : "hoegaarden.png",
+          "checked" : false          
       },
       {
           "name" : "Angelus",
@@ -187,7 +207,8 @@
           "ABV" : 7,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "angelus.png"
+          "path" : "angelus.png",
+          "checked" : false          
       },
       {
           "name" : "Duchesse Anne",
@@ -196,7 +217,8 @@
           "ABV" : 6,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "duchesse_anne.png"
+          "path" : "duchesse_anne.png",
+          "checked" : false          
       },
       {
           "name" : "Goudale",
@@ -205,7 +227,8 @@
           "ABV" : 7.2,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "goudale.png"
+          "path" : "goudale.png",
+          "checked" : false          
       },
       {
           "name" : "Queue de charrue",
@@ -214,7 +237,8 @@
           "ABV" : 6.6,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "queue_de_charrue.png"
+          "path" : "queue_de_charrue.png",
+          "checked" : false          
       },
       {
           "name" : "Pietra",
@@ -223,7 +247,8 @@
           "ABV" : 6,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "pietra.png"
+          "path" : "pietra.png",
+          "checked" : false          
       },
       {
           "name" : "Bush triple",
@@ -232,7 +257,8 @@
           "ABV" : 12,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "bush_triple_ambree.png"
+          "path" : "bush_triple_ambree.png",
+          "checked" : false          
       },
       {
           "name" : "Orval",
@@ -241,7 +267,8 @@
           "ABV" : 6.2,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "orval.png"
+          "path" : "orval.png",
+          "checked" : false          
       },
       {
           "name" : "Brooklyn East IPA",
@@ -250,7 +277,8 @@
           "ABV" : 6.9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "brooklyn_east.png"
+          "path" : "brooklyn_east.png",
+          "checked" : false          
       },
       {
           "name" : "Big Job",
@@ -259,7 +287,8 @@
           "ABV" : 7.2,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "big_job.png"
+          "path" : "big_job.png",
+          "checked" : false          
       },
       {
           "name" : "Carolus",
@@ -268,7 +297,8 @@
           "ABV" : 9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "carolus.png"
+          "path" : "carolus.png",
+          "checked" : false          
       },
       {
           "name" : "Duvel",
@@ -277,7 +307,8 @@
           "ABV" : 9.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "triple_hop_duvel.png"
+          "path" : "triple_hop_duvel.png",
+          "checked" : false          
       },
       {
           "name" : "Fruit défendu",
@@ -286,7 +317,8 @@
           "ABV" : 8.8,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "fruit_defendu.png"
+          "path" : "fruit_defendu.png",
+          "checked" : false          
       },
       {
           "name" : "Gauloise brune",
@@ -295,7 +327,8 @@
           "ABV" : 8.1,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "gauloise_brune.png"
+          "path" : "gauloise_brune.png",
+          "checked" : false          
       },
       {
           "name" : "Mort subite",
@@ -304,7 +337,8 @@
           "ABV" : 4,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "mort_subite.png"
+          "path" : "mort_subite.png",
+          "checked" : false          
       },
       {
           "name" : "Queue de charrue rouge",
@@ -313,7 +347,8 @@
           "ABV" : 8.7,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "queue_rouge.png"
+          "path" : "queue_rouge.png",
+          "checked" : false          
       },
       {
           "name" : "Kasteel rouge",
@@ -322,7 +357,8 @@
           "ABV" : 8,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "kasteel_rouge.png"
+          "path" : "kasteel_rouge.png",
+          "checked" : false          
       },
       {
           "name" : "BrewDog 5AM saint",
@@ -331,7 +367,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "5am_saint.png"
+          "path" : "5am_saint.png",
+          "checked" : false          
       },
       {
           "name" : "Faro",
@@ -340,7 +377,8 @@
           "ABV" : 4.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "faro.png"
+          "path" : "faro.png",
+          "checked" : false          
       },
       {
           "name" : "Gueuze",
@@ -349,7 +387,8 @@
           "ABV" : 4.5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "gueuze.png"
+          "path" : "gueuze.png",
+          "checked" : false          
       },
       {
           "name" : "BrewDog Jet Black Heart",
@@ -358,7 +397,8 @@
           "ABV" : 4.7,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "jet_black_heart.png"
+          "path" : "jet_black_heart.png",
+          "checked" : false          
       },
       {
           "name" : "Guinness",
@@ -367,7 +407,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "guinness.png"
+          "path" : "guinness.png",
+          "checked" : false          
       },
       {
           "name" : "Erdinger",
@@ -376,7 +417,8 @@
           "ABV" : 5.3,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "erdinger.png"
+          "path" : "erdinger.png",
+          "checked" : false          
       },
       {
           "name" : "Page 24",
@@ -385,7 +427,8 @@
           "ABV" : 5.9,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "page_24.png"
+          "path" : "page_24.png",
+          "checked" : false          
       },
       {
           "name" : "Vezelay Stout",
@@ -394,7 +437,8 @@
           "ABV" : 5,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "vezelay.png"
+          "path" : "vezelay.png",
+          "checked" : false          
       },
       {
           "name" : "Kasteel Donker",
@@ -403,7 +447,8 @@
           "ABV" : 11,
           "price" : 2.9,
           "bottle" : true,
-          "path" : "kasteel_donker.png"
+          "path" : "kasteel_donker.png",
+          "checked" : false          
       }
   ]
 }

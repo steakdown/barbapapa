@@ -471,7 +471,7 @@
       "bottle" : true,
       "path" : "la_bete.png",
       "description" : "",
-      "checked" : false
+      "checked" : true
     }
   ]
 }

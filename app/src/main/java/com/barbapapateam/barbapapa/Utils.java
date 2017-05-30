@@ -49,8 +49,9 @@ public class Utils {
                 boolean beerBottle = jsonBeer.getString("bottle").equals("true");
                 String path = jsonBeer.getString("path");
                 boolean checked = jsonBeer.getString("checked").equals("true");
+                String description = jsonBeer.getString("description");
 
-                Beer beer = new Beer(beerName, beerPrice, null, beerType, beerColor, beerABV, beerBottle, checked);
+                Beer beer = new Beer(beerName, beerPrice, null, beerType, beerColor, beerABV, beerBottle, checked, description);
                 beers.push(beer);
             }
         } catch (JSONException e) {

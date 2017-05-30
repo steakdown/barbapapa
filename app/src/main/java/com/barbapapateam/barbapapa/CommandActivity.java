@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -69,6 +70,9 @@ public class CommandActivity extends AppCompatActivity {
         // TextView price = (TextView) findViewById(R.id.priceText);
         // price.setText(beer.getPrice());
 
+        TextView description = (TextView) findViewById(R.id.description);
+        description.setText(beer.description);
+
         ImageButton cancel = (ImageButton) findViewById(R.id.cancelButton);
         cancel.setOnClickListener(new View.OnClickListener(){
 
@@ -109,17 +113,41 @@ public class CommandActivity extends AppCompatActivity {
             }
         });
 
-		Button commanderButton = (Button) findViewById(R.id.commanderButton);
+		final Button commanderButton = (Button) findViewById(R.id.commanderButton);
+        final Button retourButton = (Button) findViewById(R.id.retourButton);
+
+        if(beer.checked){
+            commanderButton.setText("Checked");
+            retourButton.setText("Annuler");
+        } else {
+            commanderButton.setText("Check-in");
+            retourButton.setText("Retour");
+        }
 		commanderButton.setOnClickListener(new View.OnClickListener(){
 
 			@Override
 			public void onClick(View view)
 			{
-                Database.pushCommand(Database.getBeerForCommand(), beerNumber, "userName");
-                Database.lastBeerOrdered = Database.getBeerForCommand();
-				Utils.goToActivity(CommandActivity.this, NotationActivity.class);
+                //Database.pushCommand(Database.getBeerForCommand(), beerNumber, "userName");
+                //Database.lastBeerOrdered = Database.getBeerForCommand();
+                if(!beer.checked) {
+                    beer.checked = true;
+                    Utils.goToActivity(CommandActivity.this, MainActivity.class);
+                }
 			}
 		});
+
+        retourButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view)
+            {
+                if(beer.checked) {
+                    beer.checked = false;
+                }
+                Utils.goToActivity(CommandActivity.this, MainActivity.class);
+            }
+        });
     }
 
     public void returnToMainActivity()

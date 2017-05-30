@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 public class Beer implements Serializable
 {
+    public String description;
     public String name;
     public float price;
     public int imageID;
@@ -20,7 +21,7 @@ public class Beer implements Serializable
     public boolean checked;
 
 
-    public Beer(String name, float price, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle, boolean checked) {
+    public Beer(String name, float price, LinkedList<String> opinions, String type, String color, float ABV, boolean bottle, boolean checked, String description) {
         this.name = name;
         this.price = price;
         //this.imagePath = imagePath;
@@ -33,6 +34,7 @@ public class Beer implements Serializable
         this.noteSum = 3;
         this.noteCount = 1;
         this.checked = checked;
+        this.description = description;
     }
 
     public float getNote()

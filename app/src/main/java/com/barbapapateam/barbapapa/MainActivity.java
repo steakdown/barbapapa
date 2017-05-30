@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LaunchCommandActivity() {
 
-        Beer beer = new Beer("Test", (float)2, null, "Trappist", "Test2", (float) 3, true, true);
+        Beer beer = new Beer("Test", (float)2, null, "Trappist", "Test2", (float) 3, true, true, "");
         Intent commandIntent = new Intent(this, CommandActivity.class);
         commandIntent.putExtra("BEER", beer);
         startActivity(commandIntent);

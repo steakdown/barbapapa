@@ -38,7 +38,7 @@
           "price" : 1.8,
           "bottle" : true,
           "path" : "leffe.png",
-          "checked" : false          
+          "checked" : true
       },
       {
           "name" : "Desperados",

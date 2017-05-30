@@ -1,6 +1,8 @@
 package com.barbapapateam.barbapapa;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +15,6 @@ import com.squareup.picasso.Picasso;
 import java.text.Collator;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Hashtable;
 import java.util.LinkedList;
 
 /**
@@ -76,7 +77,10 @@ public class BeerAdapter extends BaseAdapter {
         beerABV.setText(beer.ABV + "%");
         beerPrice.setText(beer.price + "€");
         beerType.setText(beer.type);
-
+        if(beer.checked) {
+            beerName.setPaintFlags(beerName.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            rowView.setBackgroundColor(Color.LTGRAY);
+        }
         Picasso.with(mContext).load(Database.getImageIdFromName(beer.name)).into(thumbnail);
 
         return rowView;
